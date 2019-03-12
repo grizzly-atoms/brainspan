@@ -1,0 +1,15 @@
+{
+  "name": "brainspan",
+  "version": "0.0.1",
+  "description": "When dealing with units of measure, Brainspan does the thinking so you don't have to.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Joshua Kaiser",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.4.0",
+    "timekeeper": "^2.2.0"
+  }
+}
