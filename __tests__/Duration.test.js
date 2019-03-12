@@ -71,7 +71,7 @@ describe('Duration', () => {
       tk.freeze(now);
       const expectedDate = new Date(now + duration.asMilliseconds);
       expect(duration.since()).toEqual(expectedDate);
-      expect(duration.from_now()).toEqual(duration.since());
+      expect(duration.fromNow()).toEqual(duration.since());
       expect(duration.after()).toEqual(duration.since());
       tk.reset();
     });
@@ -79,7 +79,7 @@ describe('Duration', () => {
     it('calculates the time in the future from a given Date', () => {
       const expectedDate = new Date(now + duration.asMilliseconds);
       expect(duration.since(now)).toEqual(expectedDate);
-      expect(duration.from_now(now)).toEqual(duration.since(now));
+      expect(duration.fromNow(now)).toEqual(duration.since(now));
       expect(duration.after(now)).toEqual(duration.since(now));
     });
 

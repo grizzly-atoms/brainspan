@@ -4,7 +4,6 @@
   "excludes": ["docs", "node_modules", "coverage", "__tests__"],
   "plugins": [
     { "name": "esdoc-node" },
-    { "name": "esdoc-publish-markdown-plugin" },
     {
       "name": "esdoc-standard-plugin",
       "option": {

@@ -1,0 +1,1542 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "brainspan/.external-ecmascript.js",
+    "static": true,
+    "longname": "brainspan/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "brainspan/Duration.js",
+    "content": "'use strict'\n\nconst moment = require('moment');\n\nconst SECONDS_PER_MINUTE = 60;\nconst SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;\nconst SECONDS_PER_DAY = SECONDS_PER_HOUR * 24;\nconst SECONDS_PER_WEEK = SECONDS_PER_DAY * 7;\nconst SECONDS_PER_YEAR = SECONDS_PER_DAY * 365;\nconst SECONDS_PER_MONTH = SECONDS_PER_YEAR / 12;\n\nmodule.exports = class Duration {\n\n    static get SECONDS_PER_MINUTE() {\n      return SECONDS_PER_MINUTE;\n    }\n  \n    static get SECONDS_PER_HOUR() {\n      return SECONDS_PER_HOUR;\n    }\n  \n    static get SECONDS_PER_DAY() {\n      return SECONDS_PER_DAY;\n    }\n  \n    static get SECONDS_PER_WEEK() {\n      return SECONDS_PER_WEEK;\n    }\n  \n    static get SECONDS_PER_MONTH() {\n      return SECONDS_PER_MONTH;\n    }\n  \n    static get SECONDS_PER_YEAR() {\n      return SECONDS_PER_YEAR;\n    }\n\n  constructor(seconds){\n    this.seconds = seconds;\n  }\n\n  get asMilliseconds() {\n    return this.seconds * 1000;\n  }\n\n  get asMinutes() {\n    return this.seconds / SECONDS_PER_MINUTE;\n  }\n\n  get asHours() {\n    return this.seconds / SECONDS_PER_HOUR;\n  }\n\n  get asDays() {\n    return this.seconds / SECONDS_PER_DAY;\n  }\n\n  get asWeeks() {\n    return this.seconds / SECONDS_PER_WEEK;\n  }\n\n  get asMonths() {\n    return this.seconds / SECONDS_PER_MONTH;\n  }\n\n  get asYears() {\n    return this.seconds / SECONDS_PER_YEAR;\n  }\n\n  since(date = new Date) {\n    return new Date(date + this.asMilliseconds);\n  }\n\n  from_now(date) {\n    return this.since(date);\n  }\n\n  after(date) {\n    return this.since(date);\n  }\n\n  valueOf() {\n    return this.seconds;\n  }\n\n  ago(date = new Date){\n    return new Date(date - this.asMilliseconds);\n  }\n\n  until(date){\n    return this.ago(date);\n  }\n\n  before(date){\n    return this.ago(date);\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/jbkaiser/brainspan/Duration.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "SECONDS_PER_MINUTE",
+    "memberof": "brainspan/Duration.js",
+    "static": true,
+    "longname": "brainspan/Duration.js~SECONDS_PER_MINUTE",
+    "access": "public",
+    "export": false,
+    "importPath": "brainspan/brainspan/Duration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "SECONDS_PER_HOUR",
+    "memberof": "brainspan/Duration.js",
+    "static": true,
+    "longname": "brainspan/Duration.js~SECONDS_PER_HOUR",
+    "access": "public",
+    "export": false,
+    "importPath": "brainspan/brainspan/Duration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "SECONDS_PER_DAY",
+    "memberof": "brainspan/Duration.js",
+    "static": true,
+    "longname": "brainspan/Duration.js~SECONDS_PER_DAY",
+    "access": "public",
+    "export": false,
+    "importPath": "brainspan/brainspan/Duration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "variable",
+    "name": "SECONDS_PER_WEEK",
+    "memberof": "brainspan/Duration.js",
+    "static": true,
+    "longname": "brainspan/Duration.js~SECONDS_PER_WEEK",
+    "access": "public",
+    "export": false,
+    "importPath": "brainspan/brainspan/Duration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "variable",
+    "name": "SECONDS_PER_YEAR",
+    "memberof": "brainspan/Duration.js",
+    "static": true,
+    "longname": "brainspan/Duration.js~SECONDS_PER_YEAR",
+    "access": "public",
+    "export": false,
+    "importPath": "brainspan/brainspan/Duration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "variable",
+    "name": "SECONDS_PER_MONTH",
+    "memberof": "brainspan/Duration.js",
+    "static": true,
+    "longname": "brainspan/Duration.js~SECONDS_PER_MONTH",
+    "access": "public",
+    "export": false,
+    "importPath": "brainspan/brainspan/Duration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "class",
+    "name": "Duration",
+    "memberof": "brainspan/Duration.js",
+    "static": true,
+    "longname": "brainspan/Duration.js~Duration",
+    "access": "public",
+    "export": true,
+    "importPath": "brainspan/brainspan/Duration.js",
+    "importStyle": "Duration",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "get",
+    "name": "SECONDS_PER_MINUTE",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "brainspan/Duration.js~Duration.SECONDS_PER_MINUTE",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "get",
+    "name": "SECONDS_PER_HOUR",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "brainspan/Duration.js~Duration.SECONDS_PER_HOUR",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "get",
+    "name": "SECONDS_PER_DAY",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "brainspan/Duration.js~Duration.SECONDS_PER_DAY",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "get",
+    "name": "SECONDS_PER_WEEK",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "brainspan/Duration.js~Duration.SECONDS_PER_WEEK",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "get",
+    "name": "SECONDS_PER_MONTH",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "brainspan/Duration.js~Duration.SECONDS_PER_MONTH",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "get",
+    "name": "SECONDS_PER_YEAR",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "brainspan/Duration.js~Duration.SECONDS_PER_YEAR",
+    "access": "public",
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "member",
+    "name": "seconds",
+    "memberof": "brainspan/Duration.js~Duration",
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#seconds",
+    "access": "public",
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "get",
+    "name": "asMilliseconds",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#asMilliseconds",
+    "access": "public",
+    "description": null,
+    "lineNumber": 42,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "get",
+    "name": "asMinutes",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#asMinutes",
+    "access": "public",
+    "description": null,
+    "lineNumber": 46,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "get",
+    "name": "asHours",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#asHours",
+    "access": "public",
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "get",
+    "name": "asDays",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#asDays",
+    "access": "public",
+    "description": null,
+    "lineNumber": 54,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "get",
+    "name": "asWeeks",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#asWeeks",
+    "access": "public",
+    "description": null,
+    "lineNumber": 58,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "get",
+    "name": "asMonths",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#asMonths",
+    "access": "public",
+    "description": null,
+    "lineNumber": 62,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "get",
+    "name": "asYears",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#asYears",
+    "access": "public",
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "since",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#since",
+    "access": "public",
+    "description": null,
+    "lineNumber": 70,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "optional": true,
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
+    "name": "from_now",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#from_now",
+    "access": "public",
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "after",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#after",
+    "access": "public",
+    "description": null,
+    "lineNumber": 78,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "valueOf",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#valueOf",
+    "access": "public",
+    "description": null,
+    "lineNumber": 82,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "name": "ago",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#ago",
+    "access": "public",
+    "description": null,
+    "lineNumber": 86,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "optional": true,
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "until",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#until",
+    "access": "public",
+    "description": null,
+    "lineNumber": 90,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "before",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#before",
+    "access": "public",
+    "description": null,
+    "lineNumber": 94,
+    "undocument": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "file",
+    "name": "brainspan/Number.js",
+    "content": "'use strict';\n\nconst Duration = require('./Duration');\n\nObject.defineProperty(Number.prototype, \"seconds\", {\n  get: function() {\n    return new Duration(this.valueOf());\n  }\n});\n\nObject.defineProperty(Number.prototype, \"second\", {\n  get: function() {\n    return this.seconds;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"minutes\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MINUTE);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"minute\", {\n  get: function() {\n    return this.minutes;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"hours\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_HOUR);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"hour\", {\n  get: function() {\n    return this.hours;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"days\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_DAY);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"day\", {\n  get: function() {\n    return this.days;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"weeks\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_WEEK);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"week\", {\n  get: function() {\n    return this.weeks;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"months\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MONTH);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"month\", {\n  get: function() {\n    return this.months;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"years\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_YEAR);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"year\", {\n  get: function() {\n    return this.years;\n  }\n});\n",
+    "static": true,
+    "longname": "/Users/jbkaiser/brainspan/Number.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "kind": "index",
+    "content": "",
+    "longname": "/Users/jbkaiser/brainspan/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"brainspan\",\n  \"version\": \"0.0.1\",\n  \"description\": \"When dealing with units of measure, Brainspan does the thinking so you don't have to.\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\"\n  },\n  \"author\": \"Joshua Kaiser\",\n  \"license\": \"ISC\",\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-node\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"jest\": \"^24.4.0\",\n    \"timekeeper\": \"^2.2.0\"\n  }\n}\n",
+    "longname": "/Users/jbkaiser/brainspan/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "__docId__": 79,
+    "kind": "testFile",
+    "name": "__tests__/Duration.test.js",
+    "content": "'use strict'\n\nconst tk = require('timekeeper');\n\nconst Duration = require('../Duration');\n\ndescribe('Duration', () => {\n\n  let duration;\n\n  it('has number seconds in various units of time', () => {\n    expect(Duration.SECONDS_PER_MINUTE).toBe(60);\n    expect(Duration.SECONDS_PER_HOUR).toBe(60 * 60);\n    expect(Duration.SECONDS_PER_DAY).toBe(60 * 60 * 24);\n    expect(Duration.SECONDS_PER_WEEK).toBe(60 * 60 * 24 * 7);\n    expect(Duration.SECONDS_PER_YEAR).toBe(60 * 60 * 24 * 365);\n    expect(Duration.SECONDS_PER_MONTH).toBe(60 * 60 * 24 * 365 / 12);\n  });\n\n  it('Stores a unit of time in seconds', () => {\n    duration = new Duration(100);\n    expect(duration.valueOf()).toBe(100);\n  });\n\n  it('represents Duration in seconds', () => {\n    duration = new Duration(1);\n    expect(duration.seconds).toBe(1);\n  });\n\n  it('represents Duration in minutes', () => {\n    duration = new Duration(60);\n    expect(duration.asMinutes).toBe(1);\n  });\n\n  it('represents Duration in hours', () => {\n    duration = new Duration(60 * 60);\n    expect(duration.asHours).toBe(1);\n  });\n\n  it('represents Duration in days', () => {\n    duration = new Duration(60 * 60 * 24);\n    expect(duration.asDays).toBe(1);\n  });\n\n  it('represents Duration in weeks', () => {\n    duration = new Duration(60 * 60 * 24 * 7);\n    expect(duration.asWeeks).toBe(1);\n  });\n\n  it('represents Duration in months', () => {\n    duration = new Duration(60 * 60 * 24 * 365 / 12);\n    expect(duration.asMonths).toBe(1);\n  });\n\n  it('represents Duration in years', () => {\n    duration = new Duration(60 * 60 * 24 * 365);\n    expect(duration.asYears).toBe(1);\n  });\n\n  it('represents Duration in milliseconds', () => {\n    duration = new Duration(1);\n    expect(duration.asMilliseconds).toBe(1000);\n  });\n\n  describe('Relative times', () => {\n    const now = new Date(123456789);\n    duration = new Duration(60);\n\n    it('calculates the time in the future', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since()).toEqual(expectedDate);\n      expect(duration.from_now()).toEqual(duration.since());\n      expect(duration.after()).toEqual(duration.since());\n      tk.reset();\n    });\n\n    it('calculates the time in the future from a given Date', () => {\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since(now)).toEqual(expectedDate);\n      expect(duration.from_now(now)).toEqual(duration.since(now));\n      expect(duration.after(now)).toEqual(duration.since(now));\n    });\n\n    it('calculates the time in the past', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago()).toEqual(expectedDate);\n      expect(duration.until()).toEqual(duration.ago());\n      expect(duration.before()).toEqual(duration.ago());\n      tk.reset();\n    });\n  \n    it('calculates the time in the past from a given Date', () => {\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago(now)).toEqual(expectedDate);\n      expect(duration.until(now)).toEqual(duration.ago(now));\n      expect(duration.before(now)).toEqual(duration.ago(now));\n    });\n  });\n});",
+    "static": true,
+    "longname": "/Users/jbkaiser/brainspan/__tests__/Duration.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "test",
+    "name": "describe0",
+    "testId": 0,
+    "memberof": "__tests__/Duration.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0",
+    "access": null,
+    "description": "Duration",
+    "lineNumber": 7
+  },
+  {
+    "__docId__": 81,
+    "kind": "test",
+    "name": "it1",
+    "testId": 1,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it1",
+    "access": null,
+    "description": "has number seconds in various units of time",
+    "lineNumber": 11
+  },
+  {
+    "__docId__": 82,
+    "kind": "test",
+    "name": "it2",
+    "testId": 2,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it2",
+    "access": null,
+    "description": "Stores a unit of time in seconds",
+    "lineNumber": 20
+  },
+  {
+    "__docId__": 83,
+    "kind": "test",
+    "name": "it3",
+    "testId": 3,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it3",
+    "access": null,
+    "description": "represents Duration in seconds",
+    "lineNumber": 25
+  },
+  {
+    "__docId__": 84,
+    "kind": "test",
+    "name": "it4",
+    "testId": 4,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it4",
+    "access": null,
+    "description": "represents Duration in minutes",
+    "lineNumber": 30
+  },
+  {
+    "__docId__": 85,
+    "kind": "test",
+    "name": "it5",
+    "testId": 5,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it5",
+    "access": null,
+    "description": "represents Duration in hours",
+    "lineNumber": 35
+  },
+  {
+    "__docId__": 86,
+    "kind": "test",
+    "name": "it6",
+    "testId": 6,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it6",
+    "access": null,
+    "description": "represents Duration in days",
+    "lineNumber": 40
+  },
+  {
+    "__docId__": 87,
+    "kind": "test",
+    "name": "it7",
+    "testId": 7,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it7",
+    "access": null,
+    "description": "represents Duration in weeks",
+    "lineNumber": 45
+  },
+  {
+    "__docId__": 88,
+    "kind": "test",
+    "name": "it8",
+    "testId": 8,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it8",
+    "access": null,
+    "description": "represents Duration in months",
+    "lineNumber": 50
+  },
+  {
+    "__docId__": 89,
+    "kind": "test",
+    "name": "it9",
+    "testId": 9,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it9",
+    "access": null,
+    "description": "represents Duration in years",
+    "lineNumber": 55
+  },
+  {
+    "__docId__": 90,
+    "kind": "test",
+    "name": "it10",
+    "testId": 10,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.it10",
+    "access": null,
+    "description": "represents Duration in milliseconds",
+    "lineNumber": 60
+  },
+  {
+    "__docId__": 91,
+    "kind": "test",
+    "name": "describe11",
+    "testId": 11,
+    "memberof": "__tests__/Duration.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.describe11",
+    "access": null,
+    "description": "Relative times",
+    "lineNumber": 65
+  },
+  {
+    "__docId__": 92,
+    "kind": "test",
+    "name": "it12",
+    "testId": 12,
+    "memberof": "__tests__/Duration.test.js~describe0.describe11",
+    "testDepth": 2,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.describe11.it12",
+    "access": null,
+    "description": "calculates the time in the future",
+    "lineNumber": 69
+  },
+  {
+    "__docId__": 93,
+    "kind": "test",
+    "name": "it13",
+    "testId": 13,
+    "memberof": "__tests__/Duration.test.js~describe0.describe11",
+    "testDepth": 2,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.describe11.it13",
+    "access": null,
+    "description": "calculates the time in the future from a given Date",
+    "lineNumber": 79
+  },
+  {
+    "__docId__": 94,
+    "kind": "test",
+    "name": "it14",
+    "testId": 14,
+    "memberof": "__tests__/Duration.test.js~describe0.describe11",
+    "testDepth": 2,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.describe11.it14",
+    "access": null,
+    "description": "calculates the time in the past",
+    "lineNumber": 86
+  },
+  {
+    "__docId__": 95,
+    "kind": "test",
+    "name": "it15",
+    "testId": 15,
+    "memberof": "__tests__/Duration.test.js~describe0.describe11",
+    "testDepth": 2,
+    "static": true,
+    "longname": "__tests__/Duration.test.js~describe0.describe11.it15",
+    "access": null,
+    "description": "calculates the time in the past from a given Date",
+    "lineNumber": 96
+  },
+  {
+    "__docId__": 96,
+    "kind": "testFile",
+    "name": "__tests__/Number.test.js",
+    "content": "require('../Number');\nconst Duration = require('../Duration');\n\ndescribe('Number', () => {\n  it('Returns a duration of seconds', () => {\n    expect((1).seconds).toEqual(new Duration(1));\n    expect((1).second).toEqual((1).seconds);\n  });\n  \n  it('Returns a duration of minutes', () => {\n    expect((1).minutes).toEqual(new Duration(60));\n    expect((1).minute).toEqual((1).minutes);\n  });\n  \n  it('Returns a duration of hours', () => {\n    expect((1).hours).toEqual(new Duration(60 * 60));\n    expect((1).hour).toEqual((1).hours);\n  });\n\n  it('Returns a duration of days', () => {\n    expect((1).days).toEqual(new Duration(60 * 60 * 24));\n    expect((1).day).toEqual((1).days);\n  });\n\n  it('Returns a duration of weeks', () => {\n    expect((1).weeks).toEqual(new Duration(60 * 60 * 24 * 7));\n    expect((1).week).toEqual((1).weeks);\n  });\n  \n  it('Returns a duration of months', () => {\n    expect((1).months).toEqual(new Duration(60 * 60 * 24 * 365 / 12));\n    expect((1).month).toEqual((1).months);\n  });\n\n  it('Returns a duration of years', () => {\n    expect((1).years).toEqual(new Duration(60 * 60 * 24 * 365));\n    expect((1).year).toEqual((1).years);\n  });\n});",
+    "static": true,
+    "longname": "/Users/jbkaiser/brainspan/__tests__/Number.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 97,
+    "kind": "test",
+    "name": "describe16",
+    "testId": 16,
+    "memberof": "__tests__/Number.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "__tests__/Number.test.js~describe16",
+    "access": null,
+    "description": "Number",
+    "lineNumber": 4
+  },
+  {
+    "__docId__": 98,
+    "kind": "test",
+    "name": "it17",
+    "testId": 17,
+    "memberof": "__tests__/Number.test.js~describe16",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Number.test.js~describe16.it17",
+    "access": null,
+    "description": "Returns a duration of seconds",
+    "lineNumber": 5
+  },
+  {
+    "__docId__": 99,
+    "kind": "test",
+    "name": "it18",
+    "testId": 18,
+    "memberof": "__tests__/Number.test.js~describe16",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Number.test.js~describe16.it18",
+    "access": null,
+    "description": "Returns a duration of minutes",
+    "lineNumber": 10
+  },
+  {
+    "__docId__": 100,
+    "kind": "test",
+    "name": "it19",
+    "testId": 19,
+    "memberof": "__tests__/Number.test.js~describe16",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Number.test.js~describe16.it19",
+    "access": null,
+    "description": "Returns a duration of hours",
+    "lineNumber": 15
+  },
+  {
+    "__docId__": 101,
+    "kind": "test",
+    "name": "it20",
+    "testId": 20,
+    "memberof": "__tests__/Number.test.js~describe16",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Number.test.js~describe16.it20",
+    "access": null,
+    "description": "Returns a duration of days",
+    "lineNumber": 20
+  },
+  {
+    "__docId__": 102,
+    "kind": "test",
+    "name": "it21",
+    "testId": 21,
+    "memberof": "__tests__/Number.test.js~describe16",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Number.test.js~describe16.it21",
+    "access": null,
+    "description": "Returns a duration of weeks",
+    "lineNumber": 25
+  },
+  {
+    "__docId__": 103,
+    "kind": "test",
+    "name": "it22",
+    "testId": 22,
+    "memberof": "__tests__/Number.test.js~describe16",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Number.test.js~describe16.it22",
+    "access": null,
+    "description": "Returns a duration of months",
+    "lineNumber": 30
+  },
+  {
+    "__docId__": 104,
+    "kind": "test",
+    "name": "it23",
+    "testId": 23,
+    "memberof": "__tests__/Number.test.js~describe16",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/Number.test.js~describe16.it23",
+    "access": null,
+    "description": "Returns a duration of years",
+    "lineNumber": 35
+  }
+]

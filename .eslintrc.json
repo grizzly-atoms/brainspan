@@ -3,7 +3,7 @@
     "es6": true,
     "node": true
   },
-  "extends": "@yonomi/eslint-config",
+  "extends": "airbnb",
   "rules": {
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],

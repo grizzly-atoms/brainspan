@@ -1,7 +1,3 @@
-'use strict'
-
-const moment = require('moment');
-
 const SECONDS_PER_MINUTE = 60;
 const SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;
 const SECONDS_PER_DAY = SECONDS_PER_HOUR * 24;
@@ -10,32 +6,31 @@ const SECONDS_PER_YEAR = SECONDS_PER_DAY * 365;
 const SECONDS_PER_MONTH = SECONDS_PER_YEAR / 12;
 
 module.exports = class Duration {
+  static get SECONDS_PER_MINUTE() {
+    return SECONDS_PER_MINUTE;
+  }
 
-    static get SECONDS_PER_MINUTE() {
-      return SECONDS_PER_MINUTE;
-    }
-  
-    static get SECONDS_PER_HOUR() {
-      return SECONDS_PER_HOUR;
-    }
-  
-    static get SECONDS_PER_DAY() {
-      return SECONDS_PER_DAY;
-    }
-  
-    static get SECONDS_PER_WEEK() {
-      return SECONDS_PER_WEEK;
-    }
-  
-    static get SECONDS_PER_MONTH() {
-      return SECONDS_PER_MONTH;
-    }
-  
-    static get SECONDS_PER_YEAR() {
-      return SECONDS_PER_YEAR;
-    }
+  static get SECONDS_PER_HOUR() {
+    return SECONDS_PER_HOUR;
+  }
 
-  constructor(seconds){
+  static get SECONDS_PER_DAY() {
+    return SECONDS_PER_DAY;
+  }
+
+  static get SECONDS_PER_WEEK() {
+    return SECONDS_PER_WEEK;
+  }
+
+  static get SECONDS_PER_MONTH() {
+    return SECONDS_PER_MONTH;
+  }
+
+  static get SECONDS_PER_YEAR() {
+    return SECONDS_PER_YEAR;
+  }
+
+  constructor(seconds) {
     this.seconds = seconds;
   }
 
@@ -67,11 +62,11 @@ module.exports = class Duration {
     return this.seconds / SECONDS_PER_YEAR;
   }
 
-  since(date = new Date) {
+  since(date = new Date()) {
     return new Date(date + this.asMilliseconds);
   }
 
-  from_now(date) {
+  fromNow(date) {
     return this.since(date);
   }
 
@@ -83,15 +78,15 @@ module.exports = class Duration {
     return this.seconds;
   }
 
-  ago(date = new Date){
+  ago(date = new Date()) {
     return new Date(date - this.asMilliseconds);
   }
 
-  until(date){
+  until(date) {
     return this.ago(date);
   }
 
-  before(date){
+  before(date) {
     return this.ago(date);
   }
-}
+};
