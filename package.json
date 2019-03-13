@@ -2,6 +2,11 @@
   "name": "brainspan",
   "version": "0.0.2-0",
   "description": "When dealing with units of measure, Brainspan does the thinking so you don't have to.",
+  "homepage": "https://github.com/grizzly-atoms/brainspan#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/grizzly-atoms/brainspan.git"
+  }
   "main": "index.js",
   "scripts": {
     "test": "jest"
