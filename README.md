@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/grizzly-atoms/brainspan.svg?style=svg)](https://circleci.com/gh/grizzly-atoms/brainspan)
 [![codecov](https://codecov.io/gh/grizzly-atoms/brainspan/branch/master/graph/badge.svg)](https://codecov.io/gh/grizzly-atoms/brainspan)
-[![esdoc](https://grizzly-atoms.github.io/brainspan/)](https://grizzly-atoms.github.io/brainspan/badge.svg)
+[![esdoc](https://grizzly-atoms.github.io/brainspan/badge.svg)](https://grizzly-atoms.github.io/brainspan/)
 
 # Brainspan
 
