@@ -42,7 +42,7 @@ jobs:
           path: coverage
           prefix: coverage
       - store_test_results:
-          path: test-results/results.json
+          path: test-results/jest/results.json
   publish:
     <<: *defaults
     steps:

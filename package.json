@@ -19,7 +19,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:ci": "mkdir test-results && npm run test -- --json --outputFile test-results/results.json --ci --coverage && codecov -C",
+    "test:ci": "mkdir test-results/jest && npm run test -- --json --outputFile test-results/results.json --ci --coverage && codecov -C",
     "esdoc": "./node_modules/.bin/esdoc"
   },
   "author": "Joshua Kaiser",
