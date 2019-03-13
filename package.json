@@ -7,6 +7,15 @@
     "type": "git",
     "url": "https://github.com/grizzly-atoms/brainspan.git"
   },
+  "keywords": [
+    "duration",
+    "dates",
+    "time",
+    "ActiveSupport",
+    "relative time",
+    "measurements",
+    "distance"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "jest",

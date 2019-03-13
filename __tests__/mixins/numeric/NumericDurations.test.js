@@ -1,7 +1,7 @@
-NumericMixin = require('../mixins/numeric/NumericDurations');
+NumericMixin = require('../../../mixins/numeric/NumericDurations');
 
 NumericMixin.extend(Number.prototype);
-const Duration = require('../Duration');
+const Duration = require('../../../Duration');
 
 /** @test {NumberMixin} */
 describe('NumberMixin', () => {
