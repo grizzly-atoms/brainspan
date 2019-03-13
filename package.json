@@ -29,7 +29,7 @@
       "default",
       [ "jest-junit", {
           "outputDirectory": "test-results",
-          "outputName": "junit/results.xml"
+          "outputName": "jest/results.xml"
         }
     ]]
   },
