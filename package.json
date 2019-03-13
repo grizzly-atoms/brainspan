@@ -1,6 +1,6 @@
 {
   "name": "brainspan",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "description": "When dealing with units of measure, Brainspan does the thinking so you don't have to.",
   "main": "index.js",
   "scripts": {
