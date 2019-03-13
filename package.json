@@ -19,11 +19,20 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:ci": "mkdir test-results && mkdir jest && npm run test -- --json --outputFile test-results/results.json --ci --coverage && codecov -C",
+    "test:ci": "npm run test -- --ci --testResultsProcessor=jest-junit --coverage && codecov -C",
     "esdoc": "./node_modules/.bin/esdoc"
   },
   "author": "Joshua Kaiser",
   "license": "ISC",
+  "jest": {
+    "reporters": [
+      "default",
+      [ "jest-junit", {
+          "outputDirectory": "test-results",
+          "outputName": "junit/results.xml"
+        }
+    ]]
+  },
   "devDependencies": {
     "codecov": "^3.2.0",
     "esdoc": "^1.1.0",
@@ -35,6 +44,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "jest": "^24.4.0",
+    "jest-junit": "^6.3.0",
     "timekeeper": "^2.2.0"
   },
   "dependencies": {}
