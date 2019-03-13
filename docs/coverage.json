@@ -8,7 +8,7 @@
       "actualCount": 29,
       "undocumentLines": []
     },
-    "brainspan/NumberMixin.js": {
+    "brainspan/NumericMixin.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

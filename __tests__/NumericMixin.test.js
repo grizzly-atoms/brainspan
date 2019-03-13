@@ -1,6 +1,6 @@
-NumberMixin = require('../NumberMixin');
+NumericMixin = require('../NumericMixin');
 
-NumberMixin.extend(Number.prototype);
+NumericMixin.extend(Number.prototype);
 const Duration = require('../Duration');
 
 /** @test {NumberMixin} */

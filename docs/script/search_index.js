@@ -6,9 +6,9 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "brainspan/brainspan/numbermixin.js~numbermixin",
+    "brainspan/brainspan/numericmixin.js~numbermixin",
     "variable/index.html#static-variable-NumberMixin",
-    "<span>NumberMixin</span> <span class=\"search-result-import-path\">brainspan/brainspan/NumberMixin.js</span>",
+    "<span>NumberMixin</span> <span class=\"search-result-import-path\">brainspan/brainspan/NumericMixin.js</span>",
     "variable"
   ],
   [
@@ -108,50 +108,50 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
-    "numbermixin brainspan/numbermixin.js~numbermixin,numbermixin",
-    "test-file/__tests__/NumberMixin.test.js.html#lineNumber7",
+    "numbermixin brainspan/numericmixin.js~numbermixin,numbermixin",
+    "test-file/__tests__/NumericMixin.test.js.html#lineNumber7",
     "NumberMixin",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumberMixin.test.js.html#lineNumber24",
+    "test-file/__tests__/NumericMixin.test.js.html#lineNumber24",
     "NumberMixin Returns a duration of days",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumberMixin.test.js.html#lineNumber19",
+    "test-file/__tests__/NumericMixin.test.js.html#lineNumber19",
     "NumberMixin Returns a duration of hours",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumberMixin.test.js.html#lineNumber14",
+    "test-file/__tests__/NumericMixin.test.js.html#lineNumber14",
     "NumberMixin Returns a duration of minutes",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumberMixin.test.js.html#lineNumber34",
+    "test-file/__tests__/NumericMixin.test.js.html#lineNumber34",
     "NumberMixin Returns a duration of months",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumberMixin.test.js.html#lineNumber9",
+    "test-file/__tests__/NumericMixin.test.js.html#lineNumber9",
     "NumberMixin Returns a duration of seconds",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumberMixin.test.js.html#lineNumber29",
+    "test-file/__tests__/NumericMixin.test.js.html#lineNumber29",
     "NumberMixin Returns a duration of weeks",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumberMixin.test.js.html#lineNumber39",
+    "test-file/__tests__/NumericMixin.test.js.html#lineNumber39",
     "NumberMixin Returns a duration of years",
     "test"
   ],
@@ -162,9 +162,9 @@ window.esdocSearchIndex = [
     "testFile"
   ],
   [
-    "__tests__/numbermixin.test.js",
-    "test-file/__tests__/NumberMixin.test.js.html",
-    "__tests__/NumberMixin.test.js",
+    "__tests__/numericmixin.test.js",
+    "test-file/__tests__/NumericMixin.test.js.html",
+    "__tests__/NumericMixin.test.js",
     "testFile"
   ],
   [
@@ -588,9 +588,9 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "brainspan/numbermixin.js",
-    "file/brainspan/NumberMixin.js.html",
-    "brainspan/NumberMixin.js",
+    "brainspan/numericmixin.js",
+    "file/brainspan/NumericMixin.js.html",
+    "brainspan/NumericMixin.js",
     "file"
   ]
 ]
