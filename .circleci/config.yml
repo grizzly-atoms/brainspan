@@ -51,10 +51,12 @@ jobs:
           name: ESdoc
           command: |
             npm run esdoc
-            git commit --allow-empty -m "Update Docs"
-            git tag esdoc-`git rev-parse HEAD`
+            git commit -am "Update Docs"
+            export DOCS_TAG=esdoc-`git rev-parse HEAD`
+            git tag $DOCS_TAG
+            echo "Tagged with ${DOCS_TAG}"
             # Push quietly to prevent showing the token in log
-            git push -q https://${GIT_DOCS_TOKEN}@github.com/grizzly-atoms/brainspan.git master
+            git push -q https://${GIT_DOCS_TOKEN}@github.com/grizzly-atoms/brainspan.git master $DOCS_TAG
       - store_artifacts:
           path: coverage
           prefix: coverage
