@@ -1,7 +1,11 @@
-require('../Number');
+NumberMixin = require('../NumberMixin');
+
+NumberMixin.extend(Number.prototype);
 const Duration = require('../Duration');
 
-describe('Number', () => {
+/** @test {NumberMixin} */
+describe('NumberMixin', () => {
+
   it('Returns a duration of seconds', () => {
     expect((1).seconds).toEqual(new Duration(1));
     expect((1).second).toEqual((1).seconds);
