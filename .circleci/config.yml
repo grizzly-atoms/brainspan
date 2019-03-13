@@ -42,7 +42,7 @@ jobs:
           path: coverage
           prefix: coverage
       - store_test_results:
-          path: test-results/junit
+          path: test-results
   publish:
     <<: *defaults
     steps:
