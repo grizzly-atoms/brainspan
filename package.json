@@ -21,6 +21,7 @@
     "test": "jest",
     "test:ci": "npm run test -- --ci --testResultsProcessor=jest-junit --coverage && codecov -C",
     "lint:ci": "eslint . -f ./node_modules/eslint-junit/index.js",
+    "esdoc:ci": "npm run esdoc && git commit -am \"CI automatically updated documentation\" && git tag esdoc-`git rev-parse HEAD`",
     "esdoc": "./node_modules/.bin/esdoc"
   },
   "author": "Joshua Kaiser",

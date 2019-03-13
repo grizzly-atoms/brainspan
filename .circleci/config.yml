@@ -41,6 +41,9 @@ jobs:
       - run:
           name: ESlint
           command: npm run lint:ci
+      - run:
+          name: ESdoc
+          command: npm run esdoc:ci
       - store_artifacts:
           path: coverage
           prefix: coverage
@@ -65,12 +68,16 @@ workflows:
           filters:
             branches:
               only: /.*/
+            tags:
+              ignore: /esdoc-.*/
       - test:
           requires:
             - build
           filters:
             branches:
               only: /.*/
+            tags:
+              ignore: /esdoc-.*/
   publish:
     jobs:
       - publish:
