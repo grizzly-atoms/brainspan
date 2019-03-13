@@ -20,6 +20,7 @@
   "scripts": {
     "test": "jest",
     "test:ci": "npm run test -- --ci --testResultsProcessor=jest-junit --coverage && codecov -C",
+    "lint": "eslint . -f ./node_modules/eslint-junit/index.js",
     "esdoc": "./node_modules/.bin/esdoc"
   },
   "author": "Joshua Kaiser",
@@ -27,11 +28,18 @@
   "jest": {
     "reporters": [
       "default",
-      [ "jest-junit", {
+      [
+        "jest-junit",
+        {
           "outputDirectory": "test-results",
           "outputName": "jest/results.xml"
         }
-    ]]
+      ]
+    ]
+  },
+  "eslint-junit": {
+    "suiteName": "eslint tests",
+    "output": "./test-results/eslint/results.xml"
   },
   "devDependencies": {
     "codecov": "^3.2.0",
@@ -40,6 +48,7 @@
     "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-junit": "^1.0.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",

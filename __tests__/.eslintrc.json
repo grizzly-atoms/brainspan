@@ -1,7 +1,13 @@
 {
   "env": {
+    "es6": true,
     "jest": true,
     "node": true
   },
-  "extends": "@yonomi/eslint-config"
+  "extends": "airbnb",
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  }
 }
