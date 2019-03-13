@@ -1,4 +1,9 @@
-# brainspan
+[![CircleCI](https://circleci.com/gh/grizzly-atoms/brainspan.svg?style=svg)](https://circleci.com/gh/grizzly-atoms/brainspan)
+[![codecov](https://codecov.io/gh/grizzly-atoms/brainspan/branch/master/graph/badge.svg)](https://codecov.io/gh/grizzly-atoms/brainspan)
+[![esdoc]](https://grizzly-atoms.github.io/brainspan/)(https://grizzly-atoms.github.io/brainspan/badge.svg)
+
+# Brainspan
+
 When dealing with units of measure, Brainspan does the thinking so you don't have to. Brainspan was inspired by Rails Rails Numeric and ActiveSupport::Duration.
 
 ## Example Usage
