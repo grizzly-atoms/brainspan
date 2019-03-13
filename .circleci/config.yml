@@ -20,13 +20,16 @@ jobs:
       - run:
           name: Set up .npmrc
           command: "echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc"
-      - run:
-          name: Set up git
-          command: "git config --global user.email \"joshua.b.kaiser+ci@gmail.com\""
-          command: "git config --global user.name \"Circle CI\""
       - restore_cache:
           key: npm-dependency-cache-{{ checksum "package.json" }}
       - run: "npm install"
+      - git
+      - run:
+          name: Configure git
+          command: |
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "<email>"
+            git config user.name "Circle CI"
       - save_cache:
           key: npm-dependency-cache-{{ checksum "package.json" }}
           paths:
