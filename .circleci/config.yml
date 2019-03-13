@@ -49,7 +49,12 @@ jobs:
           command: npm run lint:ci
       - run:
           name: ESdoc
-          command: npm run esdoc:ci
+          command: |
+            npm run esdoc
+            git commit --allow-empty -m "Update Docs"
+            git tag esdoc-`git rev-parse HEAD`
+            # Push quietly to prevent showing the token in log
+            git push -q https://${GIT_DOCS_TOKEN}@github.com/grizzly-atoms/brainspan.git master
       - store_artifacts:
           path: coverage
           prefix: coverage
