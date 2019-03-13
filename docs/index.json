@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "brainspan/Duration.js",
-    "content": "'use strict'\n\nconst moment = require('moment');\n\nconst SECONDS_PER_MINUTE = 60;\nconst SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;\nconst SECONDS_PER_DAY = SECONDS_PER_HOUR * 24;\nconst SECONDS_PER_WEEK = SECONDS_PER_DAY * 7;\nconst SECONDS_PER_YEAR = SECONDS_PER_DAY * 365;\nconst SECONDS_PER_MONTH = SECONDS_PER_YEAR / 12;\n\nmodule.exports = class Duration {\n\n    static get SECONDS_PER_MINUTE() {\n      return SECONDS_PER_MINUTE;\n    }\n  \n    static get SECONDS_PER_HOUR() {\n      return SECONDS_PER_HOUR;\n    }\n  \n    static get SECONDS_PER_DAY() {\n      return SECONDS_PER_DAY;\n    }\n  \n    static get SECONDS_PER_WEEK() {\n      return SECONDS_PER_WEEK;\n    }\n  \n    static get SECONDS_PER_MONTH() {\n      return SECONDS_PER_MONTH;\n    }\n  \n    static get SECONDS_PER_YEAR() {\n      return SECONDS_PER_YEAR;\n    }\n\n  constructor(seconds){\n    this.seconds = seconds;\n  }\n\n  get asMilliseconds() {\n    return this.seconds * 1000;\n  }\n\n  get asMinutes() {\n    return this.seconds / SECONDS_PER_MINUTE;\n  }\n\n  get asHours() {\n    return this.seconds / SECONDS_PER_HOUR;\n  }\n\n  get asDays() {\n    return this.seconds / SECONDS_PER_DAY;\n  }\n\n  get asWeeks() {\n    return this.seconds / SECONDS_PER_WEEK;\n  }\n\n  get asMonths() {\n    return this.seconds / SECONDS_PER_MONTH;\n  }\n\n  get asYears() {\n    return this.seconds / SECONDS_PER_YEAR;\n  }\n\n  since(date = new Date) {\n    return new Date(date + this.asMilliseconds);\n  }\n\n  from_now(date) {\n    return this.since(date);\n  }\n\n  after(date) {\n    return this.since(date);\n  }\n\n  valueOf() {\n    return this.seconds;\n  }\n\n  ago(date = new Date){\n    return new Date(date - this.asMilliseconds);\n  }\n\n  until(date){\n    return this.ago(date);\n  }\n\n  before(date){\n    return this.ago(date);\n  }\n}\n",
+    "content": "/** @type {number} */\nconst SECONDS_PER_MINUTE = 60;\n/** @type {number} */\nconst SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;\n/** @type {number} */\nconst SECONDS_PER_DAY = SECONDS_PER_HOUR * 24;\n/** @type {number} */\nconst SECONDS_PER_WEEK = SECONDS_PER_DAY * 7;\n/** @type {number} */\nconst SECONDS_PER_YEAR = SECONDS_PER_DAY * 365;\n/** @type {number} */\nconst SECONDS_PER_MONTH = SECONDS_PER_YEAR / 12;\n\n/**\n * Inspired by Rails' ActiveSupport::Duration.\n * Provides accurate date and time measurements.\n * @example\n * // Retuns a Date with the timestamp for a month before the current date and time.\n * (1).month.ago\n */\nclass Duration {\n  /** @returns {Number} the number of seconds in a minute. */\n  static get SECONDS_PER_MINUTE() {\n    return SECONDS_PER_MINUTE;\n  }\n\n  /** @returns {Number} the number of seconds in an hour. */\n  static get SECONDS_PER_HOUR() {\n    return SECONDS_PER_HOUR;\n  }\n\n  /** @returns {Number} the number of seconds in a day. */\n  static get SECONDS_PER_DAY() {\n    return SECONDS_PER_DAY;\n  }\n\n  /** @returns {Number} the number of seconds in a week. */\n  static get SECONDS_PER_WEEK() {\n    return SECONDS_PER_WEEK;\n  }\n\n  /**\n   * @returns {Number} the number of seconds in a month.\n   * Note: for this purpose, a month is presumed to be 1/12th of a year.\n   * */\n  static get SECONDS_PER_MONTH() {\n    return SECONDS_PER_MONTH;\n  }\n\n  /**\n   * @returns {Number} the number of seconds in a month.\n   * Note: for this purpose, a year is presumed to be 365 days.\n   * */\n  static get SECONDS_PER_YEAR() {\n    return SECONDS_PER_YEAR;\n  }\n\n  /**\n   * @param {Number} seconds The number of seconds the Duration represents.\n   * @returns {Duration} An object representing a span of time.\n   */\n  constructor(seconds) {\n    /** @type {number} The number of seconds the Duration represents. */\n    this.seconds = seconds;\n  }\n\n  /** @returns {Number} the number of millisends in this duration. */\n  get asMilliseconds() {\n    return this.seconds * 1000;\n  }\n\n  /** @returns {Number} the number of minutes in this duration. */\n  get asMinutes() {\n    return this.seconds / SECONDS_PER_MINUTE;\n  }\n\n  /** @returns {Number} the number of hours in this duration. */\n  get asHours() {\n    return this.seconds / SECONDS_PER_HOUR;\n  }\n\n  /** @returns {Number} the number of days in this duration. */\n  get asDays() {\n    return this.seconds / SECONDS_PER_DAY;\n  }\n\n  /** @returns {Number} the number of weeks in this duration. */\n  get asWeeks() {\n    return this.seconds / SECONDS_PER_WEEK;\n  }\n\n  /** @returns {Number} the number of months in this duration. */\n  get asMonths() {\n    return this.seconds / SECONDS_PER_MONTH;\n  }\n\n  /** @returns {Number} the number of years in this duration. */\n  get asYears() {\n    return this.seconds / SECONDS_PER_YEAR;\n  }\n\n  /**\n   * A Date in the future of the given Date, or new Date() if not supplied\n   * @param {Date} [date=new Date()]\n   * @returns {Date}\n   */\n  since(date = new Date()) {\n    return new Date(date + this.asMilliseconds);\n  }\n\n  /**\n   * Alias of since\n   * @param {Date} [date=new Date()]\n   * @returns {Date}\n   */\n  fromNow(date) {\n    return this.since(date);\n  }\n\n  /**\n   * Alias of since\n   * @param {Date} [date=new Date()]\n   * @returns {Date}\n   */\n  after(date) {\n    return this.since(date);\n  }\n\n  /**\n   * A Date in the past of the given Date, or new Date() if not supplied\n   * @param {Date} [date=new Date()]\n   * @returns {Date}\n   */\n  ago(date = new Date()) {\n    return new Date(date - this.asMilliseconds);\n  }\n\n  /**\n   * Alias of ago\n   * @param {Date} [date=new Date()]\n   * @returns {Date}\n   */\n  until(date) {\n    return this.ago(date);\n  }\n\n  /**\n   * Alias of ago\n   * @param {Date} [date=new Date()]\n   * @returns {Date}\n   */\n  before(date) {\n    return this.ago(date);\n  }\n\n  /**\n   * @returns {Number} The number of seconds represented by this Duration.\n   */\n  valueOf() {\n    return this.seconds;\n  }\n}\n\n\nmodule.exports = Duration;\n",
     "static": true,
     "longname": "/Users/jbkaiser/brainspan/Duration.js",
     "access": "public",
@@ -586,12 +586,14 @@
     "importPath": "brainspan/brainspan/Duration.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 5,
-    "undocument": true,
+    "lineNumber": 2,
     "type": {
+      "nullable": null,
       "types": [
         "number"
-      ]
+      ],
+      "spread": false,
+      "description": null
     },
     "ignore": true
   },
@@ -607,12 +609,14 @@
     "importPath": "brainspan/brainspan/Duration.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 6,
-    "undocument": true,
+    "lineNumber": 4,
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "number"
+      ],
+      "spread": false,
+      "description": null
     },
     "ignore": true
   },
@@ -628,12 +632,14 @@
     "importPath": "brainspan/brainspan/Duration.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 7,
-    "undocument": true,
+    "lineNumber": 6,
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "number"
+      ],
+      "spread": false,
+      "description": null
     },
     "ignore": true
   },
@@ -650,11 +656,13 @@
     "importStyle": null,
     "description": null,
     "lineNumber": 8,
-    "undocument": true,
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "number"
+      ],
+      "spread": false,
+      "description": null
     },
     "ignore": true
   },
@@ -670,12 +678,14 @@
     "importPath": "brainspan/brainspan/Duration.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 9,
-    "undocument": true,
+    "lineNumber": 10,
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "number"
+      ],
+      "spread": false,
+      "description": null
     },
     "ignore": true
   },
@@ -691,12 +701,14 @@
     "importPath": "brainspan/brainspan/Duration.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 10,
-    "undocument": true,
+    "lineNumber": 12,
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "number"
+      ],
+      "spread": false,
+      "description": null
     },
     "ignore": true
   },
@@ -711,9 +723,11 @@
     "export": true,
     "importPath": "brainspan/brainspan/Duration.js",
     "importStyle": "Duration",
-    "description": null,
-    "lineNumber": 12,
-    "undocument": true,
+    "description": "Inspired by Rails' ActiveSupport::Duration.\nProvides accurate date and time measurements.",
+    "examples": [
+      "// Retuns a Date with the timestamp for a month before the current date and time.\n(1).month.ago"
+    ],
+    "lineNumber": 21,
     "interface": false
   },
   {
@@ -727,8 +741,21 @@
     "longname": "brainspan/Duration.js~Duration.SECONDS_PER_MINUTE",
     "access": "public",
     "description": null,
-    "lineNumber": 14,
-    "undocument": true,
+    "lineNumber": 23,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of seconds in a minute."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of seconds in a minute."
+    },
     "type": {
       "types": [
         "*"
@@ -746,8 +773,21 @@
     "longname": "brainspan/Duration.js~Duration.SECONDS_PER_HOUR",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
-    "undocument": true,
+    "lineNumber": 28,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of seconds in an hour."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of seconds in an hour."
+    },
     "type": {
       "types": [
         "*"
@@ -765,8 +805,21 @@
     "longname": "brainspan/Duration.js~Duration.SECONDS_PER_DAY",
     "access": "public",
     "description": null,
-    "lineNumber": 22,
-    "undocument": true,
+    "lineNumber": 33,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of seconds in a day."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of seconds in a day."
+    },
     "type": {
       "types": [
         "*"
@@ -784,8 +837,21 @@
     "longname": "brainspan/Duration.js~Duration.SECONDS_PER_WEEK",
     "access": "public",
     "description": null,
-    "lineNumber": 26,
-    "undocument": true,
+    "lineNumber": 38,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of seconds in a week."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of seconds in a week."
+    },
     "type": {
       "types": [
         "*"
@@ -802,9 +868,22 @@
     "static": true,
     "longname": "brainspan/Duration.js~Duration.SECONDS_PER_MONTH",
     "access": "public",
-    "description": null,
-    "lineNumber": 30,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 46,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of seconds in a month.\nNote: for this purpose, a month is presumed to be 1/12th of a year."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of seconds in a month.\nNote: for this purpose, a month is presumed to be 1/12th of a year."
+    },
     "type": {
       "types": [
         "*"
@@ -821,9 +900,22 @@
     "static": true,
     "longname": "brainspan/Duration.js~Duration.SECONDS_PER_YEAR",
     "access": "public",
-    "description": null,
-    "lineNumber": 34,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 54,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of seconds in a month.\nNote: for this purpose, a year is presumed to be 365 days."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of seconds in a month.\nNote: for this purpose, a year is presumed to be 365 days."
+    },
     "type": {
       "types": [
         "*"
@@ -840,9 +932,34 @@
     "static": false,
     "longname": "brainspan/Duration.js~Duration#constructor",
     "access": "public",
-    "description": null,
-    "lineNumber": 38,
-    "undocument": true
+    "description": "",
+    "lineNumber": 62,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Duration} An object representing a span of time."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "seconds",
+        "description": "The number of seconds the Duration represents."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Duration"
+      ],
+      "spread": false,
+      "description": "An object representing a span of time."
+    }
   },
   {
     "__docId__": 63,
@@ -853,12 +970,14 @@
     "longname": "brainspan/Duration.js~Duration#seconds",
     "access": "public",
     "description": null,
-    "lineNumber": 39,
-    "undocument": true,
+    "lineNumber": 64,
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "number"
+      ],
+      "spread": false,
+      "description": null
     }
   },
   {
@@ -872,8 +991,21 @@
     "longname": "brainspan/Duration.js~Duration#asMilliseconds",
     "access": "public",
     "description": null,
-    "lineNumber": 42,
-    "undocument": true,
+    "lineNumber": 68,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of millisends in this duration."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of millisends in this duration."
+    },
     "type": {
       "types": [
         "*"
@@ -891,8 +1023,21 @@
     "longname": "brainspan/Duration.js~Duration#asMinutes",
     "access": "public",
     "description": null,
-    "lineNumber": 46,
-    "undocument": true,
+    "lineNumber": 73,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of minutes in this duration."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of minutes in this duration."
+    },
     "type": {
       "types": [
         "*"
@@ -910,8 +1055,21 @@
     "longname": "brainspan/Duration.js~Duration#asHours",
     "access": "public",
     "description": null,
-    "lineNumber": 50,
-    "undocument": true,
+    "lineNumber": 78,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of hours in this duration."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of hours in this duration."
+    },
     "type": {
       "types": [
         "*"
@@ -929,8 +1087,21 @@
     "longname": "brainspan/Duration.js~Duration#asDays",
     "access": "public",
     "description": null,
-    "lineNumber": 54,
-    "undocument": true,
+    "lineNumber": 83,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of days in this duration."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of days in this duration."
+    },
     "type": {
       "types": [
         "*"
@@ -948,8 +1119,21 @@
     "longname": "brainspan/Duration.js~Duration#asWeeks",
     "access": "public",
     "description": null,
-    "lineNumber": 58,
-    "undocument": true,
+    "lineNumber": 88,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of weeks in this duration."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of weeks in this duration."
+    },
     "type": {
       "types": [
         "*"
@@ -967,8 +1151,21 @@
     "longname": "brainspan/Duration.js~Duration#asMonths",
     "access": "public",
     "description": null,
-    "lineNumber": 62,
-    "undocument": true,
+    "lineNumber": 93,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of months in this duration."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of months in this duration."
+    },
     "type": {
       "types": [
         "*"
@@ -986,8 +1183,21 @@
     "longname": "brainspan/Duration.js~Duration#asYears",
     "access": "public",
     "description": null,
-    "lineNumber": 66,
-    "undocument": true,
+    "lineNumber": 98,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} the number of years in this duration."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the number of years in this duration."
+    },
     "type": {
       "types": [
         "*"
@@ -1004,49 +1214,76 @@
     "static": false,
     "longname": "brainspan/Duration.js~Duration#since",
     "access": "public",
-    "description": null,
-    "lineNumber": 70,
-    "undocument": true,
+    "description": "A Date in the future of the given Date, or new Date() if not supplied",
+    "lineNumber": 107,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Date}"
+      }
+    ],
     "params": [
       {
-        "name": "date",
-        "optional": true,
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Date"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "new Date()",
+        "defaultRaw": "new Date()",
+        "name": "date",
+        "description": ""
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Date"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
     "__docId__": 72,
     "kind": "method",
-    "name": "from_now",
+    "name": "fromNow",
     "memberof": "brainspan/Duration.js~Duration",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "brainspan/Duration.js~Duration#from_now",
+    "longname": "brainspan/Duration.js~Duration#fromNow",
     "access": "public",
-    "description": null,
-    "lineNumber": 74,
-    "undocument": true,
+    "description": "Alias of since",
+    "lineNumber": 116,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Date}"
+      }
+    ],
     "params": [
       {
-        "name": "date",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Date"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "new Date()",
+        "defaultRaw": "new Date()",
+        "name": "date",
+        "description": ""
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Date"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
@@ -1059,45 +1296,39 @@
     "static": false,
     "longname": "brainspan/Duration.js~Duration#after",
     "access": "public",
-    "description": null,
-    "lineNumber": 78,
-    "undocument": true,
+    "description": "Alias of since",
+    "lineNumber": 125,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Date}"
+      }
+    ],
     "params": [
       {
-        "name": "date",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Date"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "new Date()",
+        "defaultRaw": "new Date()",
+        "name": "date",
+        "description": ""
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Date"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
     "__docId__": 74,
-    "kind": "method",
-    "name": "valueOf",
-    "memberof": "brainspan/Duration.js~Duration",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "brainspan/Duration.js~Duration#valueOf",
-    "access": "public",
-    "description": null,
-    "lineNumber": 82,
-    "undocument": true,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 75,
     "kind": "method",
     "name": "ago",
     "memberof": "brainspan/Duration.js~Duration",
@@ -1106,26 +1337,39 @@
     "static": false,
     "longname": "brainspan/Duration.js~Duration#ago",
     "access": "public",
-    "description": null,
-    "lineNumber": 86,
-    "undocument": true,
+    "description": "A Date in the past of the given Date, or new Date() if not supplied",
+    "lineNumber": 134,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Date}"
+      }
+    ],
     "params": [
       {
-        "name": "date",
-        "optional": true,
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Date"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "new Date()",
+        "defaultRaw": "new Date()",
+        "name": "date",
+        "description": ""
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Date"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 76,
+    "__docId__": 75,
     "kind": "method",
     "name": "until",
     "memberof": "brainspan/Duration.js~Duration",
@@ -1134,25 +1378,39 @@
     "static": false,
     "longname": "brainspan/Duration.js~Duration#until",
     "access": "public",
-    "description": null,
-    "lineNumber": 90,
-    "undocument": true,
+    "description": "Alias of ago",
+    "lineNumber": 143,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Date}"
+      }
+    ],
     "params": [
       {
-        "name": "date",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Date"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "new Date()",
+        "defaultRaw": "new Date()",
+        "name": "date",
+        "description": ""
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Date"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 77,
+    "__docId__": 76,
     "kind": "method",
     "name": "before",
     "memberof": "brainspan/Duration.js~Duration",
@@ -1161,37 +1419,104 @@
     "static": false,
     "longname": "brainspan/Duration.js~Duration#before",
     "access": "public",
-    "description": null,
-    "lineNumber": 94,
-    "undocument": true,
+    "description": "Alias of ago",
+    "lineNumber": 152,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Date}"
+      }
+    ],
     "params": [
       {
-        "name": "date",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Date"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "new Date()",
+        "defaultRaw": "new Date()",
+        "name": "date",
+        "description": ""
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Date"
+      ],
+      "spread": false,
+      "description": ""
     }
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "valueOf",
+    "memberof": "brainspan/Duration.js~Duration",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/Duration.js~Duration#valueOf",
+    "access": "public",
+    "description": "",
+    "lineNumber": 159,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Number} The number of seconds represented by this Duration."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "The number of seconds represented by this Duration."
+    },
+    "params": []
   },
   {
     "__docId__": 78,
     "kind": "file",
-    "name": "brainspan/Number.js",
-    "content": "'use strict';\n\nconst Duration = require('./Duration');\n\nObject.defineProperty(Number.prototype, \"seconds\", {\n  get: function() {\n    return new Duration(this.valueOf());\n  }\n});\n\nObject.defineProperty(Number.prototype, \"second\", {\n  get: function() {\n    return this.seconds;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"minutes\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MINUTE);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"minute\", {\n  get: function() {\n    return this.minutes;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"hours\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_HOUR);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"hour\", {\n  get: function() {\n    return this.hours;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"days\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_DAY);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"day\", {\n  get: function() {\n    return this.days;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"weeks\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_WEEK);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"week\", {\n  get: function() {\n    return this.weeks;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"months\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MONTH);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"month\", {\n  get: function() {\n    return this.months;\n  }\n});\n\nObject.defineProperty(Number.prototype, \"years\", {\n  get: function() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_YEAR);\n  }\n});\n\nObject.defineProperty(Number.prototype, \"year\", {\n  get: function() {\n    return this.years;\n  }\n});\n",
+    "name": "brainspan/NumberMixin.js",
+    "content": "/* eslint-disable guard-for-in */\n/* eslint-disable no-restricted-syntax */\n\n/**\n * @type {Object} Duration\n */\nconst Duration = require('./Duration');\n\n/**\n * @type {Object} Mixin to allow numbers to be used to work with Durations\n * @example\n * NumberMixin.extend(Number.prototype);\n * (4).weeks // returns a duration that represents the number of seconds in 4 weeks\n */\nconst NumberMixin = {\n  /**\n   * Pass the prototype you want to exend to NumberMixin.extend to grant it Duration methods\n   * @param {Object} prototype\n   */\n  extend(prototype) {\n    const args = [\n      prototype,\n      this,\n    ];\n    Array.prototype.slice.call(args, 1).forEach((source) => {\n      let descriptor; let\n        prop;\n      if (source) {\n        for (prop in source) {\n          descriptor = Object.getOwnPropertyDescriptor(source, prop);\n          Object.defineProperty(prototype, prop, descriptor);\n        }\n      }\n    });\n    return prototype;\n  },\n  get seconds() {\n    return new Duration(this.valueOf());\n  },\n  get second() {\n    return this.seconds;\n  },\n  get minutes() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MINUTE);\n  },\n  get minute() {\n    return this.minutes;\n  },\n  get hours() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_HOUR);\n  },\n  get hour() {\n    return this.hours;\n  },\n  get days() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_DAY);\n  },\n  get day() {\n    return this.days;\n  },\n  get weeks() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_WEEK);\n  },\n  get week() {\n    return this.weeks;\n  },\n  get months() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MONTH);\n  },\n  get month() {\n    return this.months;\n  },\n  get years() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_YEAR);\n  },\n  get year() {\n    return this.years;\n  },\n};\n\nmodule.exports = NumberMixin;\n",
     "static": true,
-    "longname": "/Users/jbkaiser/brainspan/Number.js",
+    "longname": "/Users/jbkaiser/brainspan/NumberMixin.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
+    "__docId__": 79,
+    "kind": "variable",
+    "name": "NumberMixin",
+    "memberof": "brainspan/NumberMixin.js",
+    "static": true,
+    "longname": "brainspan/NumberMixin.js~NumberMixin",
+    "access": "public",
+    "export": true,
+    "importPath": "brainspan/brainspan/NumberMixin.js",
+    "importStyle": "NumberMixin",
+    "description": "",
+    "examples": [
+      "NumberMixin.extend(Number.prototype);\n(4).weeks // returns a duration that represents the number of seconds in 4 weeks"
+    ],
+    "lineNumber": 15,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
     "kind": "index",
-    "content": "",
+    "content": "# brainspan\nWhen dealing with units of measure, Brainspan does the thinking so you don't have to.\n",
     "longname": "/Users/jbkaiser/brainspan/README.md",
     "name": "./README.md",
     "static": true,
@@ -1199,17 +1524,17 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"brainspan\",\n  \"version\": \"0.0.1\",\n  \"description\": \"When dealing with units of measure, Brainspan does the thinking so you don't have to.\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\"\n  },\n  \"author\": \"Joshua Kaiser\",\n  \"license\": \"ISC\",\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-node\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"jest\": \"^24.4.0\",\n    \"timekeeper\": \"^2.2.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"brainspan\",\n  \"version\": \"0.0.1\",\n  \"description\": \"When dealing with units of measure, Brainspan does the thinking so you don't have to.\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\"\n  },\n  \"author\": \"Joshua Kaiser\",\n  \"license\": \"ISC\",\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-node\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.3.0\",\n    \"eslint-config-airbnb\": \"^17.1.0\",\n    \"eslint-plugin-import\": \"^2.16.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.2.1\",\n    \"eslint-plugin-react\": \"^7.12.4\",\n    \"jest\": \"^24.4.0\",\n    \"timekeeper\": \"^2.2.0\"\n  },\n  \"dependencies\": {}\n}\n",
     "longname": "/Users/jbkaiser/brainspan/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"
   },
   {
-    "__docId__": 79,
+    "__docId__": 80,
     "kind": "testFile",
     "name": "__tests__/Duration.test.js",
-    "content": "'use strict'\n\nconst tk = require('timekeeper');\n\nconst Duration = require('../Duration');\n\ndescribe('Duration', () => {\n\n  let duration;\n\n  it('has number seconds in various units of time', () => {\n    expect(Duration.SECONDS_PER_MINUTE).toBe(60);\n    expect(Duration.SECONDS_PER_HOUR).toBe(60 * 60);\n    expect(Duration.SECONDS_PER_DAY).toBe(60 * 60 * 24);\n    expect(Duration.SECONDS_PER_WEEK).toBe(60 * 60 * 24 * 7);\n    expect(Duration.SECONDS_PER_YEAR).toBe(60 * 60 * 24 * 365);\n    expect(Duration.SECONDS_PER_MONTH).toBe(60 * 60 * 24 * 365 / 12);\n  });\n\n  it('Stores a unit of time in seconds', () => {\n    duration = new Duration(100);\n    expect(duration.valueOf()).toBe(100);\n  });\n\n  it('represents Duration in seconds', () => {\n    duration = new Duration(1);\n    expect(duration.seconds).toBe(1);\n  });\n\n  it('represents Duration in minutes', () => {\n    duration = new Duration(60);\n    expect(duration.asMinutes).toBe(1);\n  });\n\n  it('represents Duration in hours', () => {\n    duration = new Duration(60 * 60);\n    expect(duration.asHours).toBe(1);\n  });\n\n  it('represents Duration in days', () => {\n    duration = new Duration(60 * 60 * 24);\n    expect(duration.asDays).toBe(1);\n  });\n\n  it('represents Duration in weeks', () => {\n    duration = new Duration(60 * 60 * 24 * 7);\n    expect(duration.asWeeks).toBe(1);\n  });\n\n  it('represents Duration in months', () => {\n    duration = new Duration(60 * 60 * 24 * 365 / 12);\n    expect(duration.asMonths).toBe(1);\n  });\n\n  it('represents Duration in years', () => {\n    duration = new Duration(60 * 60 * 24 * 365);\n    expect(duration.asYears).toBe(1);\n  });\n\n  it('represents Duration in milliseconds', () => {\n    duration = new Duration(1);\n    expect(duration.asMilliseconds).toBe(1000);\n  });\n\n  describe('Relative times', () => {\n    const now = new Date(123456789);\n    duration = new Duration(60);\n\n    it('calculates the time in the future', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since()).toEqual(expectedDate);\n      expect(duration.from_now()).toEqual(duration.since());\n      expect(duration.after()).toEqual(duration.since());\n      tk.reset();\n    });\n\n    it('calculates the time in the future from a given Date', () => {\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since(now)).toEqual(expectedDate);\n      expect(duration.from_now(now)).toEqual(duration.since(now));\n      expect(duration.after(now)).toEqual(duration.since(now));\n    });\n\n    it('calculates the time in the past', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago()).toEqual(expectedDate);\n      expect(duration.until()).toEqual(duration.ago());\n      expect(duration.before()).toEqual(duration.ago());\n      tk.reset();\n    });\n  \n    it('calculates the time in the past from a given Date', () => {\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago(now)).toEqual(expectedDate);\n      expect(duration.until(now)).toEqual(duration.ago(now));\n      expect(duration.before(now)).toEqual(duration.ago(now));\n    });\n  });\n});",
+    "content": "'use strict'\n\nconst tk = require('timekeeper');\n\nconst Duration = require('../Duration');\n\n/** @test {Duration} */\ndescribe('Duration', () => {\n\n  let duration;\n\n  it('has number seconds in various units of time', () => {\n    expect(Duration.SECONDS_PER_MINUTE).toBe(60);\n    expect(Duration.SECONDS_PER_HOUR).toBe(60 * 60);\n    expect(Duration.SECONDS_PER_DAY).toBe(60 * 60 * 24);\n    expect(Duration.SECONDS_PER_WEEK).toBe(60 * 60 * 24 * 7);\n    expect(Duration.SECONDS_PER_YEAR).toBe(60 * 60 * 24 * 365);\n    expect(Duration.SECONDS_PER_MONTH).toBe(60 * 60 * 24 * 365 / 12);\n  });\n\n  /** @test {Duration#valueOf} */\n  it('stores a unit of time in seconds', () => {\n    duration = new Duration(100);\n    expect(duration.valueOf()).toBe(100);\n  });\n\n  /** @test {Duration#seconds} */\n  it('represents Duration in seconds', () => {\n    duration = new Duration(1);\n    expect(duration.seconds).toBe(1);\n  });\n  \n  /** @test {Duration#minutes} */\n  it('represents Duration in minutes', () => {\n    duration = new Duration(60);\n    expect(duration.asMinutes).toBe(1);\n  });\n  \n  /** @test {Duration#hours} */\n  it('represents Duration in hours', () => {\n    duration = new Duration(60 * 60);\n    expect(duration.asHours).toBe(1);\n  });\n  \n  /** @test {Duration#days} */\n  it('represents Duration in days', () => {\n    duration = new Duration(60 * 60 * 24);\n    expect(duration.asDays).toBe(1);\n  });\n  \n  /** @test {Duration#weeks} */\n  it('represents Duration in weeks', () => {\n    duration = new Duration(60 * 60 * 24 * 7);\n    expect(duration.asWeeks).toBe(1);\n  });\n  \n  /** @test {Duration#months} */\n  it('represents Duration in months', () => {\n    duration = new Duration(60 * 60 * 24 * 365 / 12);\n    expect(duration.asMonths).toBe(1);\n  });\n  \n  /** @test {Duration#years} */\n  it('represents Duration in years', () => {\n    duration = new Duration(60 * 60 * 24 * 365);\n    expect(duration.asYears).toBe(1);\n  });\n  \n  /** @test {Duration#asMilliseconds} */\n  it('represents Duration in milliseconds', () => {\n    duration = new Duration(1);\n    expect(duration.asMilliseconds).toBe(1000);\n  });\n  \n  describe('Relative times', () => {\n    const now = new Date(123456789);\n    duration = new Duration(60);\n    \n    /** @test {Duration#since} */\n    it('calculates the time in the future', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since()).toEqual(expectedDate);\n      expect(duration.fromNow()).toEqual(duration.since());\n      expect(duration.after()).toEqual(duration.since());\n      tk.reset();\n    });\n    \n    /** @test {Duration#since} */\n    it('calculates the time in the future from a given Date', () => {\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since(now)).toEqual(expectedDate);\n      expect(duration.fromNow(now)).toEqual(duration.since(now));\n      expect(duration.after(now)).toEqual(duration.since(now));\n    });\n\n    /** @test {Duration#ago} */\n    it('calculates the time in the past', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago()).toEqual(expectedDate);\n      expect(duration.until()).toEqual(duration.ago());\n      expect(duration.before()).toEqual(duration.ago());\n      tk.reset();\n    });\n    \n    /** @test {Duration#ago} */\n    it('calculates the time in the past from a given Date', () => {\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago(now)).toEqual(expectedDate);\n      expect(duration.until(now)).toEqual(duration.ago(now));\n      expect(duration.before(now)).toEqual(duration.ago(now));\n    });\n  });\n});",
     "static": true,
     "longname": "/Users/jbkaiser/brainspan/__tests__/Duration.test.js",
     "access": null,
@@ -1217,7 +1542,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 80,
+    "__docId__": 81,
     "kind": "test",
     "name": "describe0",
     "testId": 0,
@@ -1227,10 +1552,13 @@
     "longname": "__tests__/Duration.test.js~describe0",
     "access": null,
     "description": "Duration",
-    "lineNumber": 7
+    "lineNumber": 8,
+    "testTargets": [
+      "Duration"
+    ]
   },
   {
-    "__docId__": 81,
+    "__docId__": 82,
     "kind": "test",
     "name": "it1",
     "testId": 1,
@@ -1240,10 +1568,10 @@
     "longname": "__tests__/Duration.test.js~describe0.it1",
     "access": null,
     "description": "has number seconds in various units of time",
-    "lineNumber": 11
+    "lineNumber": 12
   },
   {
-    "__docId__": 82,
+    "__docId__": 83,
     "kind": "test",
     "name": "it2",
     "testId": 2,
@@ -1252,11 +1580,14 @@
     "static": true,
     "longname": "__tests__/Duration.test.js~describe0.it2",
     "access": null,
-    "description": "Stores a unit of time in seconds",
-    "lineNumber": 20
+    "description": "stores a unit of time in seconds",
+    "lineNumber": 22,
+    "testTargets": [
+      "Duration#valueOf"
+    ]
   },
   {
-    "__docId__": 83,
+    "__docId__": 84,
     "kind": "test",
     "name": "it3",
     "testId": 3,
@@ -1266,10 +1597,13 @@
     "longname": "__tests__/Duration.test.js~describe0.it3",
     "access": null,
     "description": "represents Duration in seconds",
-    "lineNumber": 25
+    "lineNumber": 28,
+    "testTargets": [
+      "Duration#seconds"
+    ]
   },
   {
-    "__docId__": 84,
+    "__docId__": 85,
     "kind": "test",
     "name": "it4",
     "testId": 4,
@@ -1279,10 +1613,13 @@
     "longname": "__tests__/Duration.test.js~describe0.it4",
     "access": null,
     "description": "represents Duration in minutes",
-    "lineNumber": 30
+    "lineNumber": 34,
+    "testTargets": [
+      "Duration#minutes"
+    ]
   },
   {
-    "__docId__": 85,
+    "__docId__": 86,
     "kind": "test",
     "name": "it5",
     "testId": 5,
@@ -1292,10 +1629,13 @@
     "longname": "__tests__/Duration.test.js~describe0.it5",
     "access": null,
     "description": "represents Duration in hours",
-    "lineNumber": 35
+    "lineNumber": 40,
+    "testTargets": [
+      "Duration#hours"
+    ]
   },
   {
-    "__docId__": 86,
+    "__docId__": 87,
     "kind": "test",
     "name": "it6",
     "testId": 6,
@@ -1305,10 +1645,13 @@
     "longname": "__tests__/Duration.test.js~describe0.it6",
     "access": null,
     "description": "represents Duration in days",
-    "lineNumber": 40
+    "lineNumber": 46,
+    "testTargets": [
+      "Duration#days"
+    ]
   },
   {
-    "__docId__": 87,
+    "__docId__": 88,
     "kind": "test",
     "name": "it7",
     "testId": 7,
@@ -1318,10 +1661,13 @@
     "longname": "__tests__/Duration.test.js~describe0.it7",
     "access": null,
     "description": "represents Duration in weeks",
-    "lineNumber": 45
+    "lineNumber": 52,
+    "testTargets": [
+      "Duration#weeks"
+    ]
   },
   {
-    "__docId__": 88,
+    "__docId__": 89,
     "kind": "test",
     "name": "it8",
     "testId": 8,
@@ -1331,10 +1677,13 @@
     "longname": "__tests__/Duration.test.js~describe0.it8",
     "access": null,
     "description": "represents Duration in months",
-    "lineNumber": 50
+    "lineNumber": 58,
+    "testTargets": [
+      "Duration#months"
+    ]
   },
   {
-    "__docId__": 89,
+    "__docId__": 90,
     "kind": "test",
     "name": "it9",
     "testId": 9,
@@ -1344,10 +1693,13 @@
     "longname": "__tests__/Duration.test.js~describe0.it9",
     "access": null,
     "description": "represents Duration in years",
-    "lineNumber": 55
+    "lineNumber": 64,
+    "testTargets": [
+      "Duration#years"
+    ]
   },
   {
-    "__docId__": 90,
+    "__docId__": 91,
     "kind": "test",
     "name": "it10",
     "testId": 10,
@@ -1357,10 +1709,13 @@
     "longname": "__tests__/Duration.test.js~describe0.it10",
     "access": null,
     "description": "represents Duration in milliseconds",
-    "lineNumber": 60
+    "lineNumber": 70,
+    "testTargets": [
+      "Duration#asMilliseconds"
+    ]
   },
   {
-    "__docId__": 91,
+    "__docId__": 92,
     "kind": "test",
     "name": "describe11",
     "testId": 11,
@@ -1370,10 +1725,10 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11",
     "access": null,
     "description": "Relative times",
-    "lineNumber": 65
+    "lineNumber": 75
   },
   {
-    "__docId__": 92,
+    "__docId__": 93,
     "kind": "test",
     "name": "it12",
     "testId": 12,
@@ -1383,10 +1738,13 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11.it12",
     "access": null,
     "description": "calculates the time in the future",
-    "lineNumber": 69
+    "lineNumber": 80,
+    "testTargets": [
+      "Duration#since"
+    ]
   },
   {
-    "__docId__": 93,
+    "__docId__": 94,
     "kind": "test",
     "name": "it13",
     "testId": 13,
@@ -1396,10 +1754,13 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11.it13",
     "access": null,
     "description": "calculates the time in the future from a given Date",
-    "lineNumber": 79
+    "lineNumber": 91,
+    "testTargets": [
+      "Duration#since"
+    ]
   },
   {
-    "__docId__": 94,
+    "__docId__": 95,
     "kind": "test",
     "name": "it14",
     "testId": 14,
@@ -1409,10 +1770,13 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11.it14",
     "access": null,
     "description": "calculates the time in the past",
-    "lineNumber": 86
+    "lineNumber": 99,
+    "testTargets": [
+      "Duration#ago"
+    ]
   },
   {
-    "__docId__": 95,
+    "__docId__": 96,
     "kind": "test",
     "name": "it15",
     "testId": 15,
@@ -1422,121 +1786,127 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11.it15",
     "access": null,
     "description": "calculates the time in the past from a given Date",
-    "lineNumber": 96
+    "lineNumber": 110,
+    "testTargets": [
+      "Duration#ago"
+    ]
   },
   {
-    "__docId__": 96,
+    "__docId__": 97,
     "kind": "testFile",
-    "name": "__tests__/Number.test.js",
-    "content": "require('../Number');\nconst Duration = require('../Duration');\n\ndescribe('Number', () => {\n  it('Returns a duration of seconds', () => {\n    expect((1).seconds).toEqual(new Duration(1));\n    expect((1).second).toEqual((1).seconds);\n  });\n  \n  it('Returns a duration of minutes', () => {\n    expect((1).minutes).toEqual(new Duration(60));\n    expect((1).minute).toEqual((1).minutes);\n  });\n  \n  it('Returns a duration of hours', () => {\n    expect((1).hours).toEqual(new Duration(60 * 60));\n    expect((1).hour).toEqual((1).hours);\n  });\n\n  it('Returns a duration of days', () => {\n    expect((1).days).toEqual(new Duration(60 * 60 * 24));\n    expect((1).day).toEqual((1).days);\n  });\n\n  it('Returns a duration of weeks', () => {\n    expect((1).weeks).toEqual(new Duration(60 * 60 * 24 * 7));\n    expect((1).week).toEqual((1).weeks);\n  });\n  \n  it('Returns a duration of months', () => {\n    expect((1).months).toEqual(new Duration(60 * 60 * 24 * 365 / 12));\n    expect((1).month).toEqual((1).months);\n  });\n\n  it('Returns a duration of years', () => {\n    expect((1).years).toEqual(new Duration(60 * 60 * 24 * 365));\n    expect((1).year).toEqual((1).years);\n  });\n});",
+    "name": "__tests__/NumberMixin.test.js",
+    "content": "NumberMixin = require('../NumberMixin');\n\nNumberMixin.extend(Number.prototype);\nconst Duration = require('../Duration');\n\n/** @test {NumberMixin} */\ndescribe('NumberMixin', () => {\n\n  it('Returns a duration of seconds', () => {\n    expect((1).seconds).toEqual(new Duration(1));\n    expect((1).second).toEqual((1).seconds);\n  });\n  \n  it('Returns a duration of minutes', () => {\n    expect((1).minutes).toEqual(new Duration(60));\n    expect((1).minute).toEqual((1).minutes);\n  });\n  \n  it('Returns a duration of hours', () => {\n    expect((1).hours).toEqual(new Duration(60 * 60));\n    expect((1).hour).toEqual((1).hours);\n  });\n\n  it('Returns a duration of days', () => {\n    expect((1).days).toEqual(new Duration(60 * 60 * 24));\n    expect((1).day).toEqual((1).days);\n  });\n\n  it('Returns a duration of weeks', () => {\n    expect((1).weeks).toEqual(new Duration(60 * 60 * 24 * 7));\n    expect((1).week).toEqual((1).weeks);\n  });\n  \n  it('Returns a duration of months', () => {\n    expect((1).months).toEqual(new Duration(60 * 60 * 24 * 365 / 12));\n    expect((1).month).toEqual((1).months);\n  });\n\n  it('Returns a duration of years', () => {\n    expect((1).years).toEqual(new Duration(60 * 60 * 24 * 365));\n    expect((1).year).toEqual((1).years);\n  });\n});",
     "static": true,
-    "longname": "/Users/jbkaiser/brainspan/__tests__/Number.test.js",
+    "longname": "/Users/jbkaiser/brainspan/__tests__/NumberMixin.test.js",
     "access": null,
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 97,
+    "__docId__": 98,
     "kind": "test",
     "name": "describe16",
     "testId": 16,
-    "memberof": "__tests__/Number.test.js",
+    "memberof": "__tests__/NumberMixin.test.js",
     "testDepth": 0,
     "static": true,
-    "longname": "__tests__/Number.test.js~describe16",
+    "longname": "__tests__/NumberMixin.test.js~describe16",
     "access": null,
-    "description": "Number",
-    "lineNumber": 4
-  },
-  {
-    "__docId__": 98,
-    "kind": "test",
-    "name": "it17",
-    "testId": 17,
-    "memberof": "__tests__/Number.test.js~describe16",
-    "testDepth": 1,
-    "static": true,
-    "longname": "__tests__/Number.test.js~describe16.it17",
-    "access": null,
-    "description": "Returns a duration of seconds",
-    "lineNumber": 5
+    "description": "NumberMixin",
+    "lineNumber": 7,
+    "testTargets": [
+      "NumberMixin"
+    ]
   },
   {
     "__docId__": 99,
     "kind": "test",
-    "name": "it18",
-    "testId": 18,
-    "memberof": "__tests__/Number.test.js~describe16",
+    "name": "it17",
+    "testId": 17,
+    "memberof": "__tests__/NumberMixin.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/Number.test.js~describe16.it18",
+    "longname": "__tests__/NumberMixin.test.js~describe16.it17",
     "access": null,
-    "description": "Returns a duration of minutes",
-    "lineNumber": 10
+    "description": "Returns a duration of seconds",
+    "lineNumber": 9
   },
   {
     "__docId__": 100,
     "kind": "test",
-    "name": "it19",
-    "testId": 19,
-    "memberof": "__tests__/Number.test.js~describe16",
+    "name": "it18",
+    "testId": 18,
+    "memberof": "__tests__/NumberMixin.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/Number.test.js~describe16.it19",
+    "longname": "__tests__/NumberMixin.test.js~describe16.it18",
     "access": null,
-    "description": "Returns a duration of hours",
-    "lineNumber": 15
+    "description": "Returns a duration of minutes",
+    "lineNumber": 14
   },
   {
     "__docId__": 101,
     "kind": "test",
-    "name": "it20",
-    "testId": 20,
-    "memberof": "__tests__/Number.test.js~describe16",
+    "name": "it19",
+    "testId": 19,
+    "memberof": "__tests__/NumberMixin.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/Number.test.js~describe16.it20",
+    "longname": "__tests__/NumberMixin.test.js~describe16.it19",
     "access": null,
-    "description": "Returns a duration of days",
-    "lineNumber": 20
+    "description": "Returns a duration of hours",
+    "lineNumber": 19
   },
   {
     "__docId__": 102,
     "kind": "test",
-    "name": "it21",
-    "testId": 21,
-    "memberof": "__tests__/Number.test.js~describe16",
+    "name": "it20",
+    "testId": 20,
+    "memberof": "__tests__/NumberMixin.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/Number.test.js~describe16.it21",
+    "longname": "__tests__/NumberMixin.test.js~describe16.it20",
     "access": null,
-    "description": "Returns a duration of weeks",
-    "lineNumber": 25
+    "description": "Returns a duration of days",
+    "lineNumber": 24
   },
   {
     "__docId__": 103,
     "kind": "test",
-    "name": "it22",
-    "testId": 22,
-    "memberof": "__tests__/Number.test.js~describe16",
+    "name": "it21",
+    "testId": 21,
+    "memberof": "__tests__/NumberMixin.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/Number.test.js~describe16.it22",
+    "longname": "__tests__/NumberMixin.test.js~describe16.it21",
     "access": null,
-    "description": "Returns a duration of months",
-    "lineNumber": 30
+    "description": "Returns a duration of weeks",
+    "lineNumber": 29
   },
   {
     "__docId__": 104,
     "kind": "test",
-    "name": "it23",
-    "testId": 23,
-    "memberof": "__tests__/Number.test.js~describe16",
+    "name": "it22",
+    "testId": 22,
+    "memberof": "__tests__/NumberMixin.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/Number.test.js~describe16.it23",
+    "longname": "__tests__/NumberMixin.test.js~describe16.it22",
+    "access": null,
+    "description": "Returns a duration of months",
+    "lineNumber": 34
+  },
+  {
+    "__docId__": 105,
+    "kind": "test",
+    "name": "it23",
+    "testId": 23,
+    "memberof": "__tests__/NumberMixin.test.js~describe16",
+    "testDepth": 1,
+    "static": true,
+    "longname": "__tests__/NumberMixin.test.js~describe16.it23",
     "access": null,
     "description": "Returns a duration of years",
-    "lineNumber": 35
+    "lineNumber": 39
   }
 ]

@@ -30,6 +30,7 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/brainspan/Duration.js~Duration.html">Duration</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-NumberMixin">NumberMixin</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -41,6 +42,7 @@ const tk = require(&apos;timekeeper&apos;);
 
 const Duration = require(&apos;../Duration&apos;);
 
+/** @test {Duration} */
 describe(&apos;Duration&apos;, () =&gt; {
 
   let duration;
@@ -54,72 +56,84 @@ describe(&apos;Duration&apos;, () =&gt; {
     expect(Duration.SECONDS_PER_MONTH).toBe(60 * 60 * 24 * 365 / 12);
   });
 
-  it(&apos;Stores a unit of time in seconds&apos;, () =&gt; {
+  /** @test {Duration#valueOf} */
+  it(&apos;stores a unit of time in seconds&apos;, () =&gt; {
     duration = new Duration(100);
     expect(duration.valueOf()).toBe(100);
   });
 
+  /** @test {Duration#seconds} */
   it(&apos;represents Duration in seconds&apos;, () =&gt; {
     duration = new Duration(1);
     expect(duration.seconds).toBe(1);
   });
-
+  
+  /** @test {Duration#minutes} */
   it(&apos;represents Duration in minutes&apos;, () =&gt; {
     duration = new Duration(60);
     expect(duration.asMinutes).toBe(1);
   });
-
+  
+  /** @test {Duration#hours} */
   it(&apos;represents Duration in hours&apos;, () =&gt; {
     duration = new Duration(60 * 60);
     expect(duration.asHours).toBe(1);
   });
-
+  
+  /** @test {Duration#days} */
   it(&apos;represents Duration in days&apos;, () =&gt; {
     duration = new Duration(60 * 60 * 24);
     expect(duration.asDays).toBe(1);
   });
-
+  
+  /** @test {Duration#weeks} */
   it(&apos;represents Duration in weeks&apos;, () =&gt; {
     duration = new Duration(60 * 60 * 24 * 7);
     expect(duration.asWeeks).toBe(1);
   });
-
+  
+  /** @test {Duration#months} */
   it(&apos;represents Duration in months&apos;, () =&gt; {
     duration = new Duration(60 * 60 * 24 * 365 / 12);
     expect(duration.asMonths).toBe(1);
   });
-
+  
+  /** @test {Duration#years} */
   it(&apos;represents Duration in years&apos;, () =&gt; {
     duration = new Duration(60 * 60 * 24 * 365);
     expect(duration.asYears).toBe(1);
   });
-
+  
+  /** @test {Duration#asMilliseconds} */
   it(&apos;represents Duration in milliseconds&apos;, () =&gt; {
     duration = new Duration(1);
     expect(duration.asMilliseconds).toBe(1000);
   });
-
+  
   describe(&apos;Relative times&apos;, () =&gt; {
     const now = new Date(123456789);
     duration = new Duration(60);
-
+    
+    /** @test {Duration#since} */
     it(&apos;calculates the time in the future&apos;, () =&gt; {
       const now = new Date(&apos;1980-01-08&apos;);
       tk.freeze(now);
       const expectedDate = new Date(now + duration.asMilliseconds);
       expect(duration.since()).toEqual(expectedDate);
-      expect(duration.from_now()).toEqual(duration.since());
+      expect(duration.fromNow()).toEqual(duration.since());
       expect(duration.after()).toEqual(duration.since());
       tk.reset();
     });
-
+    
+    /** @test {Duration#since} */
     it(&apos;calculates the time in the future from a given Date&apos;, () =&gt; {
       const expectedDate = new Date(now + duration.asMilliseconds);
       expect(duration.since(now)).toEqual(expectedDate);
-      expect(duration.from_now(now)).toEqual(duration.since(now));
+      expect(duration.fromNow(now)).toEqual(duration.since(now));
       expect(duration.after(now)).toEqual(duration.since(now));
     });
 
+    /** @test {Duration#ago} */
     it(&apos;calculates the time in the past&apos;, () =&gt; {
       const now = new Date(&apos;1980-01-08&apos;);
       tk.freeze(now);
@@ -129,7 +143,8 @@ describe(&apos;Duration&apos;, () =&gt; {
       expect(duration.before()).toEqual(duration.ago());
       tk.reset();
     });
-  
+    
+    /** @test {Duration#ago} */
     it(&apos;calculates the time in the past from a given Date&apos;, () =&gt; {
       const expectedDate = new Date(now - duration.asMilliseconds);
       expect(duration.ago(now)).toEqual(expectedDate);

@@ -1,42 +1,17 @@
 {
-  "coverage": "0%",
-  "expectCount": 29,
-  "actualCount": 0,
+  "coverage": "100%",
+  "expectCount": 30,
+  "actualCount": 30,
   "files": {
     "brainspan/Duration.js": {
       "expectCount": 29,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        12,
-        14,
-        18,
-        22,
-        26,
-        30,
-        34,
-        38,
-        39,
-        42,
-        46,
-        50,
-        54,
-        58,
-        62,
-        66,
-        70,
-        74,
-        78,
-        82,
-        86,
-        90,
-        94
-      ]
+      "actualCount": 29,
+      "undocumentLines": []
+    },
+    "brainspan/NumberMixin.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
     }
   }
 }
