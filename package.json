@@ -19,11 +19,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:ci": "npm run test -- --ci --coverage && codecov -C",
     "esdoc": "./node_modules/.bin/esdoc"
   },
   "author": "Joshua Kaiser",
   "license": "ISC",
   "devDependencies": {
+    "codecov": "^3.2.0",
     "esdoc": "^1.1.0",
     "esdoc-node": "^1.0.4",
     "esdoc-standard-plugin": "^1.0.0",
