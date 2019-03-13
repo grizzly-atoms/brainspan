@@ -27,7 +27,7 @@ jobs:
           key: npm-dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
-      - persist_to_workspace:
+      - persist_to_workspace: 
           root: *workspace_root
           paths:
             - .

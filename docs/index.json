@@ -1654,7 +1654,7 @@
   },
   {
     "kind": "index",
-    "content": "# brainspan\nWhen dealing with units of measure, Brainspan does the thinking so you don't have to. Brainspan was inspired by Rails Rails Numeric and ActiveSupport::Duration.\n\n## Example Usage\n\n### Use with Numeric Mixin:\n```\nrequire('brainspan').enableMixins();\n\n(1).month.ago(); // Date representing the timestamp from a month prior to current time\n(1).month.fromNow(); // Date representing the timestamp from a month in the future\n(2).weeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc\n(8).days.after(new Date('2019-03-10')); // Date representing March 18, 2019\n```\n\n### If you prefer not to extend the Number prototype:\n```\nconst { Duration } = require('brainspan');\n\nconst oneMonth = new Duration(Duration.SECONDS_PER_MONTH);\noneMonth.ago(); // Date representing the timestamp from a month prior to current time\noneMonth.fromNow(); // Date representing the timestamp from a month in the future\n\nconst twoWeeks = new Duration(Duration.SECONDS_PER_WEEK * 2);\ntwoWeeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc\n\nconst eightDays = new Duration(Duration.SECONDS_PER_DAY * 8);\neightDays.after(new Date('2019-03-10')); // Date representing March 18, 2019\n```\n\n## Links\n### API Documentation\nhttps://grizzly-atoms.github.io/brainspan/\n### NPM\nhttps://www.npmjs.com/package/brainspan\n",
+    "content": "[![npm version](https://badge.fury.io/js/brainspan.svg)](https://badge.fury.io/js/brainspan)\n[![CircleCI](https://circleci.com/gh/grizzly-atoms/brainspan.svg?style=svg)](https://circleci.com/gh/grizzly-atoms/brainspan)\n[![codecov](https://codecov.io/gh/grizzly-atoms/brainspan/branch/master/graph/badge.svg)](https://codecov.io/gh/grizzly-atoms/brainspan)\n[![esdoc](https://grizzly-atoms.github.io/brainspan/badge.svg)](https://grizzly-atoms.github.io/brainspan/)\n\n# Brainspan\n\nWhen dealing with units of measure, Brainspan does the thinking so you don't have to. Brainspan was inspired by Rails Rails Numeric and ActiveSupport::Duration.\n\n## Example Usage\n\n### Use with Numeric Mixin:\n```\nrequire('brainspan').enableMixins();\n\n(1).month.ago(); // Date representing the timestamp from a month prior to current time\n(1).month.fromNow(); // Date representing the timestamp from a month in the future\n(2).weeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc\n(8).days.after(new Date('2019-03-10')); // Date representing March 18, 2019\n```\n\n### If you prefer not to extend the Number prototype:\n```\nconst { Duration } = require('brainspan');\n\nconst oneMonth = new Duration(Duration.SECONDS_PER_MONTH);\noneMonth.ago(); // Date representing the timestamp from a month prior to current time\noneMonth.fromNow(); // Date representing the timestamp from a month in the future\n\nconst twoWeeks = new Duration(Duration.SECONDS_PER_WEEK * 2);\ntwoWeeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc\n\nconst eightDays = new Duration(Duration.SECONDS_PER_DAY * 8);\neightDays.after(new Date('2019-03-10')); // Date representing March 18, 2019\n```\n\n## Links\n### API Documentation\nhttps://grizzly-atoms.github.io/brainspan/\n### NPM\nhttps://www.npmjs.com/package/brainspan\n",
     "longname": "/Users/jbkaiser/brainspan/README.md",
     "name": "./README.md",
     "static": true,
@@ -1662,7 +1662,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"brainspan\",\n  \"version\": \"0.0.2-1\",\n  \"description\": \"When dealing with units of measure, Brainspan does the thinking so you don't have to.\",\n  \"homepage\": \"https://grizzly-atoms.github.io/brainspan/\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/grizzly-atoms/brainspan.git\"\n  },\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\",\n    \"esdoc\": \"./node_modules/.bin/esdoc\"\n  },\n  \"author\": \"Joshua Kaiser\",\n  \"license\": \"ISC\",\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-node\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.3.0\",\n    \"eslint-config-airbnb\": \"^17.1.0\",\n    \"eslint-plugin-import\": \"^2.16.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.2.1\",\n    \"eslint-plugin-react\": \"^7.12.4\",\n    \"jest\": \"^24.4.0\",\n    \"timekeeper\": \"^2.2.0\"\n  },\n  \"dependencies\": {}\n}\n",
+    "content": "{\n  \"name\": \"brainspan\",\n  \"version\": \"0.0.2-9\",\n  \"description\": \"When dealing with units of measure, Brainspan does the thinking so you don't have to.\",\n  \"homepage\": \"https://grizzly-atoms.github.io/brainspan/\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/grizzly-atoms/brainspan.git\"\n  },\n  \"keywords\": [\n    \"duration\",\n    \"dates\",\n    \"time\",\n    \"ActiveSupport\",\n    \"relative time\",\n    \"measurements\",\n    \"distance\"\n  ],\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\",\n    \"test:ci\": \"npm run test -- --ci --testResultsProcessor=jest-junit --coverage && codecov -C\",\n    \"lint:ci\": \"eslint . -f ./node_modules/eslint-junit/index.js\",\n    \"esdoc\": \"./node_modules/.bin/esdoc\"\n  },\n  \"author\": \"Joshua Kaiser\",\n  \"license\": \"ISC\",\n  \"jest\": {\n    \"reporters\": [\n      \"default\",\n      [\n        \"jest-junit\",\n        {\n          \"outputDirectory\": \"test-results\",\n          \"outputName\": \"jest/results.xml\"\n        }\n      ]\n    ]\n  },\n  \"eslint-junit\": {\n    \"suiteName\": \"eslint tests\",\n    \"output\": \"./test-results/eslint/results.xml\"\n  },\n  \"devDependencies\": {\n    \"codecov\": \"^3.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-node\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.3.0\",\n    \"eslint-config-airbnb\": \"^17.1.0\",\n    \"eslint-junit\": \"^1.0.1\",\n    \"eslint-plugin-import\": \"^2.16.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.2.1\",\n    \"eslint-plugin-react\": \"^7.12.4\",\n    \"jest\": \"^24.4.0\",\n    \"jest-junit\": \"^6.3.0\",\n    \"timekeeper\": \"^2.2.0\"\n  },\n  \"dependencies\": {}\n}\n",
     "longname": "/Users/jbkaiser/brainspan/package.json",
     "name": "package.json",
     "static": true,
@@ -1672,7 +1672,7 @@
     "__docId__": 89,
     "kind": "testFile",
     "name": "__tests__/Duration.test.js",
-    "content": "'use strict'\n\nconst tk = require('timekeeper');\n\nconst Duration = require('../Duration');\n\n/** @test {Duration} */\ndescribe('Duration', () => {\n\n  let duration;\n\n  it('has number seconds in various units of time', () => {\n    expect(Duration.SECONDS_PER_MINUTE).toBe(60);\n    expect(Duration.SECONDS_PER_HOUR).toBe(60 * 60);\n    expect(Duration.SECONDS_PER_DAY).toBe(60 * 60 * 24);\n    expect(Duration.SECONDS_PER_WEEK).toBe(60 * 60 * 24 * 7);\n    expect(Duration.SECONDS_PER_YEAR).toBe(60 * 60 * 24 * 365);\n    expect(Duration.SECONDS_PER_MONTH).toBe(60 * 60 * 24 * 365 / 12);\n  });\n\n  /** @test {Duration#valueOf} */\n  it('stores a unit of time in seconds', () => {\n    duration = new Duration(100);\n    expect(duration.valueOf()).toBe(100);\n  });\n\n  /** @test {Duration#seconds} */\n  it('represents Duration in seconds', () => {\n    duration = new Duration(1);\n    expect(duration.seconds).toBe(1);\n  });\n  \n  /** @test {Duration#minutes} */\n  it('represents Duration in minutes', () => {\n    duration = new Duration(60);\n    expect(duration.asMinutes).toBe(1);\n  });\n  \n  /** @test {Duration#hours} */\n  it('represents Duration in hours', () => {\n    duration = new Duration(60 * 60);\n    expect(duration.asHours).toBe(1);\n  });\n  \n  /** @test {Duration#days} */\n  it('represents Duration in days', () => {\n    duration = new Duration(60 * 60 * 24);\n    expect(duration.asDays).toBe(1);\n  });\n  \n  /** @test {Duration#weeks} */\n  it('represents Duration in weeks', () => {\n    duration = new Duration(60 * 60 * 24 * 7);\n    expect(duration.asWeeks).toBe(1);\n  });\n  \n  /** @test {Duration#months} */\n  it('represents Duration in months', () => {\n    duration = new Duration(60 * 60 * 24 * 365 / 12);\n    expect(duration.asMonths).toBe(1);\n  });\n  \n  /** @test {Duration#years} */\n  it('represents Duration in years', () => {\n    duration = new Duration(60 * 60 * 24 * 365);\n    expect(duration.asYears).toBe(1);\n  });\n  \n  /** @test {Duration#asMilliseconds} */\n  it('represents Duration in milliseconds', () => {\n    duration = new Duration(1);\n    expect(duration.asMilliseconds).toBe(1000);\n  });\n  \n  describe('Relative times', () => {\n    const now = new Date(123456789);\n    duration = new Duration(60);\n    \n    /** @test {Duration#since} */\n    it('calculates the time in the future', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since()).toEqual(expectedDate);\n      expect(duration.fromNow()).toEqual(duration.since());\n      expect(duration.after()).toEqual(duration.since());\n      tk.reset();\n    });\n    \n    /** @test {Duration#since} */\n    it('calculates the time in the future from a given Date', () => {\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since(now)).toEqual(expectedDate);\n      expect(duration.fromNow(now)).toEqual(duration.since(now));\n      expect(duration.after(now)).toEqual(duration.since(now));\n    });\n\n    /** @test {Duration#ago} */\n    it('calculates the time in the past', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago()).toEqual(expectedDate);\n      expect(duration.until()).toEqual(duration.ago());\n      expect(duration.before()).toEqual(duration.ago());\n      tk.reset();\n    });\n    \n    /** @test {Duration#ago} */\n    it('calculates the time in the past from a given Date', () => {\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago(now)).toEqual(expectedDate);\n      expect(duration.until(now)).toEqual(duration.ago(now));\n      expect(duration.before(now)).toEqual(duration.ago(now));\n    });\n  });\n});",
+    "content": "const tk = require('timekeeper');\n\nconst Duration = require('../Duration');\n\n/** @test {Duration} */\ndescribe('Duration', () => {\n  let duration;\n\n  it('has number seconds in various units of time', () => {\n    expect(Duration.SECONDS_PER_MINUTE).toBe(60);\n    expect(Duration.SECONDS_PER_HOUR).toBe(60 * 60);\n    expect(Duration.SECONDS_PER_DAY).toBe(60 * 60 * 24);\n    expect(Duration.SECONDS_PER_WEEK).toBe(60 * 60 * 24 * 7);\n    expect(Duration.SECONDS_PER_YEAR).toBe(60 * 60 * 24 * 365);\n    expect(Duration.SECONDS_PER_MONTH).toBe(60 * 60 * 24 * 365 / 12);\n  });\n\n  /** @test {Duration#valueOf} */\n  it('stores a unit of time in seconds', () => {\n    duration = new Duration(100);\n    expect(duration.valueOf()).toBe(100);\n  });\n\n  /** @test {Duration#seconds} */\n  it('represents Duration in seconds', () => {\n    duration = new Duration(1);\n    expect(duration.seconds).toBe(1);\n  });\n\n  /** @test {Duration#minutes} */\n  it('represents Duration in minutes', () => {\n    duration = new Duration(60);\n    expect(duration.asMinutes).toBe(1);\n  });\n\n  /** @test {Duration#hours} */\n  it('represents Duration in hours', () => {\n    duration = new Duration(60 * 60);\n    expect(duration.asHours).toBe(1);\n  });\n\n  /** @test {Duration#days} */\n  it('represents Duration in days', () => {\n    duration = new Duration(60 * 60 * 24);\n    expect(duration.asDays).toBe(1);\n  });\n\n  /** @test {Duration#weeks} */\n  it('represents Duration in weeks', () => {\n    duration = new Duration(60 * 60 * 24 * 7);\n    expect(duration.asWeeks).toBe(1);\n  });\n\n  /** @test {Duration#months} */\n  it('represents Duration in months', () => {\n    duration = new Duration(60 * 60 * 24 * 365 / 12);\n    expect(duration.asMonths).toBe(1);\n  });\n\n  /** @test {Duration#years} */\n  it('represents Duration in years', () => {\n    duration = new Duration(60 * 60 * 24 * 365);\n    expect(duration.asYears).toBe(1);\n  });\n\n  /** @test {Duration#asMilliseconds} */\n  it('represents Duration in milliseconds', () => {\n    duration = new Duration(1);\n    expect(duration.asMilliseconds).toBe(1000);\n  });\n\n  describe('Relative times', () => {\n    let now = new Date(123456789);\n    duration = new Duration(60);\n\n    /** @test {Duration#since} */\n    it('calculates the time in the future', () => {\n      now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since()).toEqual(expectedDate);\n      expect(duration.fromNow()).toEqual(duration.since());\n      expect(duration.after()).toEqual(duration.since());\n      tk.reset();\n    });\n\n    /** @test {Duration#since} */\n    it('calculates the time in the future from a given Date', () => {\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since(now)).toEqual(expectedDate);\n      expect(duration.fromNow(now)).toEqual(duration.since(now));\n      expect(duration.after(now)).toEqual(duration.since(now));\n    });\n\n    /** @test {Duration#ago} */\n    it('calculates the time in the past', () => {\n      now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago()).toEqual(expectedDate);\n      expect(duration.until()).toEqual(duration.ago());\n      expect(duration.before()).toEqual(duration.ago());\n      tk.reset();\n    });\n\n    /** @test {Duration#ago} */\n    it('calculates the time in the past from a given Date', () => {\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago(now)).toEqual(expectedDate);\n      expect(duration.until(now)).toEqual(duration.ago(now));\n      expect(duration.before(now)).toEqual(duration.ago(now));\n    });\n  });\n});\n",
     "static": true,
     "longname": "/Users/jbkaiser/brainspan/__tests__/Duration.test.js",
     "access": null,
@@ -1690,7 +1690,7 @@
     "longname": "__tests__/Duration.test.js~describe0",
     "access": null,
     "description": "Duration",
-    "lineNumber": 8,
+    "lineNumber": 6,
     "testTargets": [
       "Duration"
     ]
@@ -1706,7 +1706,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it1",
     "access": null,
     "description": "has number seconds in various units of time",
-    "lineNumber": 12
+    "lineNumber": 9
   },
   {
     "__docId__": 92,
@@ -1719,7 +1719,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it2",
     "access": null,
     "description": "stores a unit of time in seconds",
-    "lineNumber": 22,
+    "lineNumber": 19,
     "testTargets": [
       "Duration#valueOf"
     ]
@@ -1735,7 +1735,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it3",
     "access": null,
     "description": "represents Duration in seconds",
-    "lineNumber": 28,
+    "lineNumber": 25,
     "testTargets": [
       "Duration#seconds"
     ]
@@ -1751,7 +1751,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it4",
     "access": null,
     "description": "represents Duration in minutes",
-    "lineNumber": 34,
+    "lineNumber": 31,
     "testTargets": [
       "Duration#minutes"
     ]
@@ -1767,7 +1767,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it5",
     "access": null,
     "description": "represents Duration in hours",
-    "lineNumber": 40,
+    "lineNumber": 37,
     "testTargets": [
       "Duration#hours"
     ]
@@ -1783,7 +1783,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it6",
     "access": null,
     "description": "represents Duration in days",
-    "lineNumber": 46,
+    "lineNumber": 43,
     "testTargets": [
       "Duration#days"
     ]
@@ -1799,7 +1799,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it7",
     "access": null,
     "description": "represents Duration in weeks",
-    "lineNumber": 52,
+    "lineNumber": 49,
     "testTargets": [
       "Duration#weeks"
     ]
@@ -1815,7 +1815,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it8",
     "access": null,
     "description": "represents Duration in months",
-    "lineNumber": 58,
+    "lineNumber": 55,
     "testTargets": [
       "Duration#months"
     ]
@@ -1831,7 +1831,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it9",
     "access": null,
     "description": "represents Duration in years",
-    "lineNumber": 64,
+    "lineNumber": 61,
     "testTargets": [
       "Duration#years"
     ]
@@ -1847,7 +1847,7 @@
     "longname": "__tests__/Duration.test.js~describe0.it10",
     "access": null,
     "description": "represents Duration in milliseconds",
-    "lineNumber": 70,
+    "lineNumber": 67,
     "testTargets": [
       "Duration#asMilliseconds"
     ]
@@ -1863,7 +1863,7 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11",
     "access": null,
     "description": "Relative times",
-    "lineNumber": 75
+    "lineNumber": 72
   },
   {
     "__docId__": 102,
@@ -1876,7 +1876,7 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11.it12",
     "access": null,
     "description": "calculates the time in the future",
-    "lineNumber": 80,
+    "lineNumber": 77,
     "testTargets": [
       "Duration#since"
     ]
@@ -1892,7 +1892,7 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11.it13",
     "access": null,
     "description": "calculates the time in the future from a given Date",
-    "lineNumber": 91,
+    "lineNumber": 88,
     "testTargets": [
       "Duration#since"
     ]
@@ -1908,7 +1908,7 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11.it14",
     "access": null,
     "description": "calculates the time in the past",
-    "lineNumber": 99,
+    "lineNumber": 96,
     "testTargets": [
       "Duration#ago"
     ]
@@ -1924,7 +1924,7 @@
     "longname": "__tests__/Duration.test.js~describe0.describe11.it15",
     "access": null,
     "description": "calculates the time in the past from a given Date",
-    "lineNumber": 110,
+    "lineNumber": 107,
     "testTargets": [
       "Duration#ago"
     ]
@@ -1932,10 +1932,10 @@
   {
     "__docId__": 106,
     "kind": "testFile",
-    "name": "__tests__/NumericMixin.test.js",
-    "content": "NumericMixin = require('../mixins/numeric/NumericDurations');\n\nNumericMixin.extend(Number.prototype);\nconst Duration = require('../Duration');\n\n/** @test {NumberMixin} */\ndescribe('NumberMixin', () => {\n\n  it('Returns a duration of seconds', () => {\n    expect((1).seconds).toEqual(new Duration(1));\n    expect((1).second).toEqual((1).seconds);\n  });\n  \n  it('Returns a duration of minutes', () => {\n    expect((1).minutes).toEqual(new Duration(60));\n    expect((1).minute).toEqual((1).minutes);\n  });\n  \n  it('Returns a duration of hours', () => {\n    expect((1).hours).toEqual(new Duration(60 * 60));\n    expect((1).hour).toEqual((1).hours);\n  });\n\n  it('Returns a duration of days', () => {\n    expect((1).days).toEqual(new Duration(60 * 60 * 24));\n    expect((1).day).toEqual((1).days);\n  });\n\n  it('Returns a duration of weeks', () => {\n    expect((1).weeks).toEqual(new Duration(60 * 60 * 24 * 7));\n    expect((1).week).toEqual((1).weeks);\n  });\n  \n  it('Returns a duration of months', () => {\n    expect((1).months).toEqual(new Duration(60 * 60 * 24 * 365 / 12));\n    expect((1).month).toEqual((1).months);\n  });\n\n  it('Returns a duration of years', () => {\n    expect((1).years).toEqual(new Duration(60 * 60 * 24 * 365));\n    expect((1).year).toEqual((1).years);\n  });\n});",
+    "name": "__tests__/mixins/numeric/NumericDurations.test.js",
+    "content": "const NumericMixin = require('../../../mixins/numeric/NumericDurations');\n\nNumericMixin.extend(Number.prototype);\nconst Duration = require('../../../Duration');\n\n/** @test {NumberMixin} */\ndescribe('NumberMixin', () => {\n  it('Returns a duration of seconds', () => {\n    expect((1).seconds).toEqual(new Duration(1));\n    expect((1).second).toEqual((1).seconds);\n  });\n\n  it('Returns a duration of minutes', () => {\n    expect((1).minutes).toEqual(new Duration(60));\n    expect((1).minute).toEqual((1).minutes);\n  });\n\n  it('Returns a duration of hours', () => {\n    expect((1).hours).toEqual(new Duration(60 * 60));\n    expect((1).hour).toEqual((1).hours);\n  });\n\n  it('Returns a duration of days', () => {\n    expect((1).days).toEqual(new Duration(60 * 60 * 24));\n    expect((1).day).toEqual((1).days);\n  });\n\n  it('Returns a duration of weeks', () => {\n    expect((1).weeks).toEqual(new Duration(60 * 60 * 24 * 7));\n    expect((1).week).toEqual((1).weeks);\n  });\n\n  it('Returns a duration of months', () => {\n    expect((1).months).toEqual(new Duration(60 * 60 * 24 * 365 / 12));\n    expect((1).month).toEqual((1).months);\n  });\n\n  it('Returns a duration of years', () => {\n    expect((1).years).toEqual(new Duration(60 * 60 * 24 * 365));\n    expect((1).year).toEqual((1).years);\n  });\n});\n",
     "static": true,
-    "longname": "/Users/jbkaiser/brainspan/__tests__/NumericMixin.test.js",
+    "longname": "/Users/jbkaiser/brainspan/__tests__/mixins/numeric/NumericDurations.test.js",
     "access": null,
     "description": null,
     "lineNumber": 1
@@ -1945,10 +1945,10 @@
     "kind": "test",
     "name": "describe16",
     "testId": 16,
-    "memberof": "__tests__/NumericMixin.test.js",
+    "memberof": "__tests__/mixins/numeric/NumericDurations.test.js",
     "testDepth": 0,
     "static": true,
-    "longname": "__tests__/NumericMixin.test.js~describe16",
+    "longname": "__tests__/mixins/numeric/NumericDurations.test.js~describe16",
     "access": null,
     "description": "NumberMixin",
     "lineNumber": 7,
@@ -1961,90 +1961,90 @@
     "kind": "test",
     "name": "it17",
     "testId": 17,
-    "memberof": "__tests__/NumericMixin.test.js~describe16",
+    "memberof": "__tests__/mixins/numeric/NumericDurations.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/NumericMixin.test.js~describe16.it17",
+    "longname": "__tests__/mixins/numeric/NumericDurations.test.js~describe16.it17",
     "access": null,
     "description": "Returns a duration of seconds",
-    "lineNumber": 9
+    "lineNumber": 8
   },
   {
     "__docId__": 109,
     "kind": "test",
     "name": "it18",
     "testId": 18,
-    "memberof": "__tests__/NumericMixin.test.js~describe16",
+    "memberof": "__tests__/mixins/numeric/NumericDurations.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/NumericMixin.test.js~describe16.it18",
+    "longname": "__tests__/mixins/numeric/NumericDurations.test.js~describe16.it18",
     "access": null,
     "description": "Returns a duration of minutes",
-    "lineNumber": 14
+    "lineNumber": 13
   },
   {
     "__docId__": 110,
     "kind": "test",
     "name": "it19",
     "testId": 19,
-    "memberof": "__tests__/NumericMixin.test.js~describe16",
+    "memberof": "__tests__/mixins/numeric/NumericDurations.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/NumericMixin.test.js~describe16.it19",
+    "longname": "__tests__/mixins/numeric/NumericDurations.test.js~describe16.it19",
     "access": null,
     "description": "Returns a duration of hours",
-    "lineNumber": 19
+    "lineNumber": 18
   },
   {
     "__docId__": 111,
     "kind": "test",
     "name": "it20",
     "testId": 20,
-    "memberof": "__tests__/NumericMixin.test.js~describe16",
+    "memberof": "__tests__/mixins/numeric/NumericDurations.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/NumericMixin.test.js~describe16.it20",
+    "longname": "__tests__/mixins/numeric/NumericDurations.test.js~describe16.it20",
     "access": null,
     "description": "Returns a duration of days",
-    "lineNumber": 24
+    "lineNumber": 23
   },
   {
     "__docId__": 112,
     "kind": "test",
     "name": "it21",
     "testId": 21,
-    "memberof": "__tests__/NumericMixin.test.js~describe16",
+    "memberof": "__tests__/mixins/numeric/NumericDurations.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/NumericMixin.test.js~describe16.it21",
+    "longname": "__tests__/mixins/numeric/NumericDurations.test.js~describe16.it21",
     "access": null,
     "description": "Returns a duration of weeks",
-    "lineNumber": 29
+    "lineNumber": 28
   },
   {
     "__docId__": 113,
     "kind": "test",
     "name": "it22",
     "testId": 22,
-    "memberof": "__tests__/NumericMixin.test.js~describe16",
+    "memberof": "__tests__/mixins/numeric/NumericDurations.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/NumericMixin.test.js~describe16.it22",
+    "longname": "__tests__/mixins/numeric/NumericDurations.test.js~describe16.it22",
     "access": null,
     "description": "Returns a duration of months",
-    "lineNumber": 34
+    "lineNumber": 33
   },
   {
     "__docId__": 114,
     "kind": "test",
     "name": "it23",
     "testId": 23,
-    "memberof": "__tests__/NumericMixin.test.js~describe16",
+    "memberof": "__tests__/mixins/numeric/NumericDurations.test.js~describe16",
     "testDepth": 1,
     "static": true,
-    "longname": "__tests__/NumericMixin.test.js~describe16.it23",
+    "longname": "__tests__/mixins/numeric/NumericDurations.test.js~describe16.it23",
     "access": null,
     "description": "Returns a duration of years",
-    "lineNumber": 39
+    "lineNumber": 38
   }
 ]

@@ -25,145 +25,145 @@ window.esdocSearchIndex = [
   ],
   [
     "duration brainspan/duration.js~duration,duration",
-    "test-file/__tests__/Duration.test.js.html#lineNumber8",
+    "test-file/__tests__/Duration.test.js.html#lineNumber6",
     "Duration",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/Duration.test.js.html#lineNumber75",
+    "test-file/__tests__/Duration.test.js.html#lineNumber72",
     "Duration Relative times",
     "test"
   ],
   [
     "duration#since brainspan/duration.js~duration#since,duration#since",
-    "test-file/__tests__/Duration.test.js.html#lineNumber80",
+    "test-file/__tests__/Duration.test.js.html#lineNumber77",
     "Duration Relative times calculates the time in the future",
     "test"
   ],
   [
     "duration#since brainspan/duration.js~duration#since,duration#since",
-    "test-file/__tests__/Duration.test.js.html#lineNumber91",
+    "test-file/__tests__/Duration.test.js.html#lineNumber88",
     "Duration Relative times calculates the time in the future from a given Date",
     "test"
   ],
   [
     "duration#ago brainspan/duration.js~duration#ago,duration#ago",
-    "test-file/__tests__/Duration.test.js.html#lineNumber99",
+    "test-file/__tests__/Duration.test.js.html#lineNumber96",
     "Duration Relative times calculates the time in the past",
     "test"
   ],
   [
     "duration#ago brainspan/duration.js~duration#ago,duration#ago",
-    "test-file/__tests__/Duration.test.js.html#lineNumber110",
+    "test-file/__tests__/Duration.test.js.html#lineNumber107",
     "Duration Relative times calculates the time in the past from a given Date",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/Duration.test.js.html#lineNumber12",
+    "test-file/__tests__/Duration.test.js.html#lineNumber9",
     "Duration has number seconds in various units of time",
     "test"
   ],
   [
     "duration#days duration#days,duration#days",
-    "test-file/__tests__/Duration.test.js.html#lineNumber46",
+    "test-file/__tests__/Duration.test.js.html#lineNumber43",
     "Duration represents Duration in days",
     "test"
   ],
   [
     "duration#hours duration#hours,duration#hours",
-    "test-file/__tests__/Duration.test.js.html#lineNumber40",
+    "test-file/__tests__/Duration.test.js.html#lineNumber37",
     "Duration represents Duration in hours",
     "test"
   ],
   [
     "duration#asmilliseconds brainspan/duration.js~duration#asmilliseconds,duration#asmilliseconds",
-    "test-file/__tests__/Duration.test.js.html#lineNumber70",
+    "test-file/__tests__/Duration.test.js.html#lineNumber67",
     "Duration represents Duration in milliseconds",
     "test"
   ],
   [
     "duration#minutes duration#minutes,duration#minutes",
-    "test-file/__tests__/Duration.test.js.html#lineNumber34",
+    "test-file/__tests__/Duration.test.js.html#lineNumber31",
     "Duration represents Duration in minutes",
     "test"
   ],
   [
     "duration#months duration#months,duration#months",
-    "test-file/__tests__/Duration.test.js.html#lineNumber58",
+    "test-file/__tests__/Duration.test.js.html#lineNumber55",
     "Duration represents Duration in months",
     "test"
   ],
   [
     "duration#seconds brainspan/duration.js~duration#seconds,duration#seconds",
-    "test-file/__tests__/Duration.test.js.html#lineNumber28",
+    "test-file/__tests__/Duration.test.js.html#lineNumber25",
     "Duration represents Duration in seconds",
     "test"
   ],
   [
     "duration#weeks duration#weeks,duration#weeks",
-    "test-file/__tests__/Duration.test.js.html#lineNumber52",
+    "test-file/__tests__/Duration.test.js.html#lineNumber49",
     "Duration represents Duration in weeks",
     "test"
   ],
   [
     "duration#years duration#years,duration#years",
-    "test-file/__tests__/Duration.test.js.html#lineNumber64",
+    "test-file/__tests__/Duration.test.js.html#lineNumber61",
     "Duration represents Duration in years",
     "test"
   ],
   [
     "duration#valueof brainspan/duration.js~duration#valueof,duration#valueof",
-    "test-file/__tests__/Duration.test.js.html#lineNumber22",
+    "test-file/__tests__/Duration.test.js.html#lineNumber19",
     "Duration stores a unit of time in seconds",
     "test"
   ],
   [
     "numbermixin numbermixin,numbermixin",
-    "test-file/__tests__/NumericMixin.test.js.html#lineNumber7",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html#lineNumber7",
     "NumberMixin",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumericMixin.test.js.html#lineNumber24",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html#lineNumber23",
     "NumberMixin Returns a duration of days",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumericMixin.test.js.html#lineNumber19",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html#lineNumber18",
     "NumberMixin Returns a duration of hours",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumericMixin.test.js.html#lineNumber14",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html#lineNumber13",
     "NumberMixin Returns a duration of minutes",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumericMixin.test.js.html#lineNumber34",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html#lineNumber33",
     "NumberMixin Returns a duration of months",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumericMixin.test.js.html#lineNumber9",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html#lineNumber8",
     "NumberMixin Returns a duration of seconds",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumericMixin.test.js.html#lineNumber29",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html#lineNumber28",
     "NumberMixin Returns a duration of weeks",
     "test"
   ],
   [
     "",
-    "test-file/__tests__/NumericMixin.test.js.html#lineNumber39",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html#lineNumber38",
     "NumberMixin Returns a duration of years",
     "test"
   ],
@@ -174,9 +174,9 @@ window.esdocSearchIndex = [
     "testFile"
   ],
   [
-    "__tests__/numericmixin.test.js",
-    "test-file/__tests__/NumericMixin.test.js.html",
-    "__tests__/NumericMixin.test.js",
+    "__tests__/mixins/numeric/numericdurations.test.js",
+    "test-file/__tests__/mixins/numeric/NumericDurations.test.js.html",
+    "__tests__/mixins/numeric/NumericDurations.test.js",
     "testFile"
   ],
   [
