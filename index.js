@@ -1,4 +1,16 @@
 const Duration = require('./Duration');
-const NumericMixin = require('./NumericMixin');
+const mixins = require('./mixins');
 
-module.exports = { Duration, NumericMixin };
+class BrainSpan {
+  constructor() {
+    this.Duration = Duration;
+    this.mixins = mixins;
+  }
+
+  enableMixins() {
+    this.mixins.numeric.NumericDuration.extend(Number.prototype);
+    return this;
+  }
+}
+
+module.exports = new BrainSpan();

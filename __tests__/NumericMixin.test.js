@@ -1,4 +1,4 @@
-NumericMixin = require('../NumericMixin');
+NumericMixin = require('../mixins/numeric/NumericDurations');
 
 NumericMixin.extend(Number.prototype);
 const Duration = require('../Duration');

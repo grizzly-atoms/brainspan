@@ -1,14 +1,26 @@
 window.esdocSearchIndex = [
   [
+    "brainspan/brainspan/index.js~brainspan",
+    "class/brainspan/index.js~BrainSpan.html",
+    "<span>BrainSpan</span> <span class=\"search-result-import-path\">brainspan/brainspan/index.js</span>",
+    "class"
+  ],
+  [
     "brainspan/brainspan/duration.js~duration",
     "class/brainspan/Duration.js~Duration.html",
     "<span>Duration</span> <span class=\"search-result-import-path\">brainspan/brainspan/Duration.js</span>",
     "class"
   ],
   [
-    "brainspan/brainspan/numericmixin.js~numbermixin",
-    "variable/index.html#static-variable-NumberMixin",
-    "<span>NumberMixin</span> <span class=\"search-result-import-path\">brainspan/brainspan/NumericMixin.js</span>",
+    "brainspan/brainspan/mixins/numeric/numericdurations.js~numericduration",
+    "variable/index.html#static-variable-NumericDuration",
+    "<span>NumericDuration</span> <span class=\"search-result-import-path\">brainspan/brainspan/mixins/numeric/NumericDurations.js</span>",
+    "variable"
+  ],
+  [
+    "brainspan/brainspan/index.js~brainspan",
+    "variable/index.html#static-variable-brainSpan",
+    "<span>brainSpan</span> <span class=\"search-result-import-path\">brainspan/brainspan/index.js</span>",
     "variable"
   ],
   [
@@ -108,7 +120,7 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
-    "numbermixin brainspan/numericmixin.js~numbermixin,numbermixin",
+    "numbermixin numbermixin,numbermixin",
     "test-file/__tests__/NumericMixin.test.js.html#lineNumber7",
     "NumberMixin",
     "test"
@@ -588,9 +600,51 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "brainspan/numericmixin.js",
-    "file/brainspan/NumericMixin.js.html",
-    "brainspan/NumericMixin.js",
+    "brainspan/index.js",
+    "file/brainspan/index.js.html",
+    "brainspan/index.js",
+    "file"
+  ],
+  [
+    "brainspan/index.js~brainspan#duration",
+    "class/brainspan/index.js~BrainSpan.html#instance-member-Duration",
+    "brainspan/index.js~BrainSpan#Duration",
+    "member"
+  ],
+  [
+    "brainspan/index.js~brainspan#constructor",
+    "class/brainspan/index.js~BrainSpan.html#instance-constructor-constructor",
+    "brainspan/index.js~BrainSpan#constructor",
+    "method"
+  ],
+  [
+    "brainspan/index.js~brainspan#enablemixins",
+    "class/brainspan/index.js~BrainSpan.html#instance-method-enableMixins",
+    "brainspan/index.js~BrainSpan#enableMixins",
+    "method"
+  ],
+  [
+    "brainspan/index.js~brainspan#mixins",
+    "class/brainspan/index.js~BrainSpan.html#instance-member-mixins",
+    "brainspan/index.js~BrainSpan#mixins",
+    "member"
+  ],
+  [
+    "brainspan/mixins/index.js",
+    "file/brainspan/mixins/index.js.html",
+    "brainspan/mixins/index.js",
+    "file"
+  ],
+  [
+    "brainspan/mixins/numeric/numericdurations.js",
+    "file/brainspan/mixins/numeric/NumericDurations.js.html",
+    "brainspan/mixins/numeric/NumericDurations.js",
+    "file"
+  ],
+  [
+    "brainspan/mixins/numeric/index.js",
+    "file/brainspan/mixins/numeric/index.js.html",
+    "brainspan/mixins/numeric/index.js",
     "file"
   ]
 ]

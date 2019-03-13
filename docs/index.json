@@ -1481,28 +1481,155 @@
   {
     "__docId__": 78,
     "kind": "file",
-    "name": "brainspan/NumericMixin.js",
-    "content": "/* eslint-disable guard-for-in */\n/* eslint-disable no-restricted-syntax */\n\n/**\n * @type {Object} Duration\n */\nconst Duration = require('./Duration');\n\n/**\n * @type {Object} Mixin to allow numbers to be used to work with Durations\n * @example\n * NumberMixin.extend(Number.prototype);\n * (4).weeks // returns a duration that represents the number of seconds in 4 weeks\n */\nconst NumberMixin = {\n  /**\n   * Pass the prototype you want to exend to NumberMixin.extend to grant it Duration methods\n   * @param {Object} prototype\n   */\n  extend(prototype) {\n    const args = [\n      prototype,\n      this,\n    ];\n    Array.prototype.slice.call(args, 1).forEach((source) => {\n      let descriptor; let\n        prop;\n      if (source) {\n        for (prop in source) {\n          descriptor = Object.getOwnPropertyDescriptor(source, prop);\n          Object.defineProperty(prototype, prop, descriptor);\n        }\n      }\n    });\n    return prototype;\n  },\n  get seconds() {\n    return new Duration(this.valueOf());\n  },\n  get second() {\n    return this.seconds;\n  },\n  get minutes() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MINUTE);\n  },\n  get minute() {\n    return this.minutes;\n  },\n  get hours() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_HOUR);\n  },\n  get hour() {\n    return this.hours;\n  },\n  get days() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_DAY);\n  },\n  get day() {\n    return this.days;\n  },\n  get weeks() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_WEEK);\n  },\n  get week() {\n    return this.weeks;\n  },\n  get months() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MONTH);\n  },\n  get month() {\n    return this.months;\n  },\n  get years() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_YEAR);\n  },\n  get year() {\n    return this.years;\n  },\n};\n\nmodule.exports = NumberMixin;\n",
+    "name": "brainspan/index.js",
+    "content": "const Duration = require('./Duration');\nconst mixins = require('./mixins');\n\nclass BrainSpan {\n  constructor() {\n    this.Duration = Duration;\n    this.mixins = mixins;\n  }\n\n  enableMixins() {\n    this.mixins.numeric.NumericDuration.extend(Number.prototype);\n    return this;\n  }\n}\n\nmodule.exports = new BrainSpan();\n",
     "static": true,
-    "longname": "/Users/jbkaiser/brainspan/NumericMixin.js",
+    "longname": "/Users/jbkaiser/brainspan/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
     "__docId__": 79,
-    "kind": "variable",
-    "name": "NumberMixin",
-    "memberof": "brainspan/NumericMixin.js",
+    "kind": "class",
+    "name": "BrainSpan",
+    "memberof": "brainspan/index.js",
     "static": true,
-    "longname": "brainspan/NumericMixin.js~NumberMixin",
+    "longname": "brainspan/index.js~BrainSpan",
     "access": "public",
     "export": true,
-    "importPath": "brainspan/brainspan/NumericMixin.js",
-    "importStyle": "NumberMixin",
+    "importPath": "brainspan/brainspan/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "pseudoExport": true,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 80,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "brainspan/index.js~BrainSpan",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/index.js~BrainSpan#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "member",
+    "name": "Duration",
+    "memberof": "brainspan/index.js~BrainSpan",
+    "static": false,
+    "longname": "brainspan/index.js~BrainSpan#Duration",
+    "access": "public",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "member",
+    "name": "mixins",
+    "memberof": "brainspan/index.js~BrainSpan",
+    "static": false,
+    "longname": "brainspan/index.js~BrainSpan#mixins",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "enableMixins",
+    "memberof": "brainspan/index.js~BrainSpan",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "brainspan/index.js~BrainSpan#enableMixins",
+    "access": "public",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "variable",
+    "name": "brainSpan",
+    "memberof": "brainspan/index.js",
+    "static": true,
+    "longname": "brainspan/index.js~brainSpan",
+    "access": "public",
+    "export": true,
+    "importPath": "brainspan/brainspan/index.js",
+    "importStyle": "brainSpan",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "brainspan/index.js~BrainSpan"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "file",
+    "name": "brainspan/mixins/index.js",
+    "content": "const numeric = require('./numeric');\n\nmodule.exports = { numeric };\n",
+    "static": true,
+    "longname": "/Users/jbkaiser/brainspan/mixins/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 86,
+    "kind": "file",
+    "name": "brainspan/mixins/numeric/NumericDurations.js",
+    "content": "/* eslint-disable guard-for-in */\n/* eslint-disable no-restricted-syntax */\n\n/**\n * @type {Object} Duration\n */\nconst Duration = require('../../Duration');\n\n/**\n * @type {Object} Mixin to allow numbers to be used to work with Durations\n * @example\n * NumericDuration.extend(Number.prototype);\n * (4).weeks // returns a duration that represents the number of seconds in 4 weeks\n */\nconst NumericDuration = {\n  /**\n   * Pass the prototype you want to exend to NumericDuration.extend to grant it Duration methods\n   * @param {Object} prototype\n   */\n  extend(prototype) {\n    const args = [\n      prototype,\n      this,\n    ];\n    Array.prototype.slice.call(args, 1).forEach((source) => {\n      let descriptor;\n      let prop;\n      for (prop in source) {\n        descriptor = Object.getOwnPropertyDescriptor(source, prop);\n        Object.defineProperty(prototype, prop, descriptor);\n      }\n    });\n    return prototype;\n  },\n  get seconds() {\n    return new Duration(this.valueOf());\n  },\n  get second() {\n    return this.seconds;\n  },\n  get minutes() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MINUTE);\n  },\n  get minute() {\n    return this.minutes;\n  },\n  get hours() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_HOUR);\n  },\n  get hour() {\n    return this.hours;\n  },\n  get days() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_DAY);\n  },\n  get day() {\n    return this.days;\n  },\n  get weeks() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_WEEK);\n  },\n  get week() {\n    return this.weeks;\n  },\n  get months() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_MONTH);\n  },\n  get month() {\n    return this.months;\n  },\n  get years() {\n    return new Duration(this.valueOf() * Duration.SECONDS_PER_YEAR);\n  },\n  get year() {\n    return this.years;\n  },\n};\n\nmodule.exports = NumericDuration;\n",
+    "static": true,
+    "longname": "/Users/jbkaiser/brainspan/mixins/numeric/NumericDurations.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 87,
+    "kind": "variable",
+    "name": "NumericDuration",
+    "memberof": "brainspan/mixins/numeric/NumericDurations.js",
+    "static": true,
+    "longname": "brainspan/mixins/numeric/NumericDurations.js~NumericDuration",
+    "access": "public",
+    "export": true,
+    "importPath": "brainspan/brainspan/mixins/numeric/NumericDurations.js",
+    "importStyle": "NumericDuration",
     "description": "",
     "examples": [
-      "NumberMixin.extend(Number.prototype);\n(4).weeks // returns a duration that represents the number of seconds in 4 weeks"
+      "NumericDuration.extend(Number.prototype);\n(4).weeks // returns a duration that represents the number of seconds in 4 weeks"
     ],
     "lineNumber": 15,
     "type": {
@@ -1515,8 +1642,19 @@
     }
   },
   {
+    "__docId__": 88,
+    "kind": "file",
+    "name": "brainspan/mixins/numeric/index.js",
+    "content": "const NumericDuration = require('./NumericDurations');\n\nmodule.exports = { NumericDuration };\n",
+    "static": true,
+    "longname": "/Users/jbkaiser/brainspan/mixins/numeric/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
     "kind": "index",
-    "content": "# brainspan\nWhen dealing with units of measure, Brainspan does the thinking so you don't have to. Brainspan was inspired by Rails Rails Numeric and ActiveSupport::Duration.\n\n## Example Usage\n```\n(1).month.ago(); // Date representing the timestamp from a month prior to current time\n(1).month.fromNow(); // Date representing the timestamp from a month in the future\n(2).weeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc\n(8).days.after(new Date('2019-03-10')); // Date representing March 18, 2019\n```\n\n## Links\n### API Documentation\nhttps://grizzly-atoms.github.io/brainspan/\n### NPM\nhttps://www.npmjs.com/package/brainspan\n",
+    "content": "# brainspan\nWhen dealing with units of measure, Brainspan does the thinking so you don't have to. Brainspan was inspired by Rails Rails Numeric and ActiveSupport::Duration.\n\n## Example Usage\n\n### Use with Numeric Mixin:\n```\nrequire('brainspan').enableMixins();\n\n(1).month.ago(); // Date representing the timestamp from a month prior to current time\n(1).month.fromNow(); // Date representing the timestamp from a month in the future\n(2).weeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc\n(8).days.after(new Date('2019-03-10')); // Date representing March 18, 2019\n```\n\n### If you prefer not to extend the Number prototype:\n```\nconst { Duration } = require('brainspan');\n\nconst oneMonth = new Duration(Duration.SECONDS_PER_MONTH);\noneMonth.ago(); // Date representing the timestamp from a month prior to current time\noneMonth.fromNow(); // Date representing the timestamp from a month in the future\n\nconst twoWeeks = new Duration(Duration.SECONDS_PER_WEEK * 2);\ntwoWeeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc\n\nconst eightDays = new Duration(Duration.SECONDS_PER_DAY * 8);\neightDays.after(new Date('2019-03-10')); // Date representing March 18, 2019\n```\n\n## Links\n### API Documentation\nhttps://grizzly-atoms.github.io/brainspan/\n### NPM\nhttps://www.npmjs.com/package/brainspan\n",
     "longname": "/Users/jbkaiser/brainspan/README.md",
     "name": "./README.md",
     "static": true,
@@ -1524,14 +1662,14 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"brainspan\",\n  \"version\": \"0.0.2-1\",\n  \"description\": \"When dealing with units of measure, Brainspan does the thinking so you don't have to.\",\n  \"homepage\": \"https://github.com/grizzly-atoms/brainspan#readme\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/grizzly-atoms/brainspan.git\"\n  },\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\"\n  },\n  \"author\": \"Joshua Kaiser\",\n  \"license\": \"ISC\",\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-node\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.3.0\",\n    \"eslint-config-airbnb\": \"^17.1.0\",\n    \"eslint-plugin-import\": \"^2.16.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.2.1\",\n    \"eslint-plugin-react\": \"^7.12.4\",\n    \"jest\": \"^24.4.0\",\n    \"timekeeper\": \"^2.2.0\"\n  },\n  \"dependencies\": {}\n}\n",
+    "content": "{\n  \"name\": \"brainspan\",\n  \"version\": \"0.0.2-1\",\n  \"description\": \"When dealing with units of measure, Brainspan does the thinking so you don't have to.\",\n  \"homepage\": \"https://grizzly-atoms.github.io/brainspan/\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/grizzly-atoms/brainspan.git\"\n  },\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\",\n    \"esdoc\": \"./node_modules/.bin/esdoc\"\n  },\n  \"author\": \"Joshua Kaiser\",\n  \"license\": \"ISC\",\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-node\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.3.0\",\n    \"eslint-config-airbnb\": \"^17.1.0\",\n    \"eslint-plugin-import\": \"^2.16.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.2.1\",\n    \"eslint-plugin-react\": \"^7.12.4\",\n    \"jest\": \"^24.4.0\",\n    \"timekeeper\": \"^2.2.0\"\n  },\n  \"dependencies\": {}\n}\n",
     "longname": "/Users/jbkaiser/brainspan/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"
   },
   {
-    "__docId__": 80,
+    "__docId__": 89,
     "kind": "testFile",
     "name": "__tests__/Duration.test.js",
     "content": "'use strict'\n\nconst tk = require('timekeeper');\n\nconst Duration = require('../Duration');\n\n/** @test {Duration} */\ndescribe('Duration', () => {\n\n  let duration;\n\n  it('has number seconds in various units of time', () => {\n    expect(Duration.SECONDS_PER_MINUTE).toBe(60);\n    expect(Duration.SECONDS_PER_HOUR).toBe(60 * 60);\n    expect(Duration.SECONDS_PER_DAY).toBe(60 * 60 * 24);\n    expect(Duration.SECONDS_PER_WEEK).toBe(60 * 60 * 24 * 7);\n    expect(Duration.SECONDS_PER_YEAR).toBe(60 * 60 * 24 * 365);\n    expect(Duration.SECONDS_PER_MONTH).toBe(60 * 60 * 24 * 365 / 12);\n  });\n\n  /** @test {Duration#valueOf} */\n  it('stores a unit of time in seconds', () => {\n    duration = new Duration(100);\n    expect(duration.valueOf()).toBe(100);\n  });\n\n  /** @test {Duration#seconds} */\n  it('represents Duration in seconds', () => {\n    duration = new Duration(1);\n    expect(duration.seconds).toBe(1);\n  });\n  \n  /** @test {Duration#minutes} */\n  it('represents Duration in minutes', () => {\n    duration = new Duration(60);\n    expect(duration.asMinutes).toBe(1);\n  });\n  \n  /** @test {Duration#hours} */\n  it('represents Duration in hours', () => {\n    duration = new Duration(60 * 60);\n    expect(duration.asHours).toBe(1);\n  });\n  \n  /** @test {Duration#days} */\n  it('represents Duration in days', () => {\n    duration = new Duration(60 * 60 * 24);\n    expect(duration.asDays).toBe(1);\n  });\n  \n  /** @test {Duration#weeks} */\n  it('represents Duration in weeks', () => {\n    duration = new Duration(60 * 60 * 24 * 7);\n    expect(duration.asWeeks).toBe(1);\n  });\n  \n  /** @test {Duration#months} */\n  it('represents Duration in months', () => {\n    duration = new Duration(60 * 60 * 24 * 365 / 12);\n    expect(duration.asMonths).toBe(1);\n  });\n  \n  /** @test {Duration#years} */\n  it('represents Duration in years', () => {\n    duration = new Duration(60 * 60 * 24 * 365);\n    expect(duration.asYears).toBe(1);\n  });\n  \n  /** @test {Duration#asMilliseconds} */\n  it('represents Duration in milliseconds', () => {\n    duration = new Duration(1);\n    expect(duration.asMilliseconds).toBe(1000);\n  });\n  \n  describe('Relative times', () => {\n    const now = new Date(123456789);\n    duration = new Duration(60);\n    \n    /** @test {Duration#since} */\n    it('calculates the time in the future', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since()).toEqual(expectedDate);\n      expect(duration.fromNow()).toEqual(duration.since());\n      expect(duration.after()).toEqual(duration.since());\n      tk.reset();\n    });\n    \n    /** @test {Duration#since} */\n    it('calculates the time in the future from a given Date', () => {\n      const expectedDate = new Date(now + duration.asMilliseconds);\n      expect(duration.since(now)).toEqual(expectedDate);\n      expect(duration.fromNow(now)).toEqual(duration.since(now));\n      expect(duration.after(now)).toEqual(duration.since(now));\n    });\n\n    /** @test {Duration#ago} */\n    it('calculates the time in the past', () => {\n      const now = new Date('1980-01-08');\n      tk.freeze(now);\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago()).toEqual(expectedDate);\n      expect(duration.until()).toEqual(duration.ago());\n      expect(duration.before()).toEqual(duration.ago());\n      tk.reset();\n    });\n    \n    /** @test {Duration#ago} */\n    it('calculates the time in the past from a given Date', () => {\n      const expectedDate = new Date(now - duration.asMilliseconds);\n      expect(duration.ago(now)).toEqual(expectedDate);\n      expect(duration.until(now)).toEqual(duration.ago(now));\n      expect(duration.before(now)).toEqual(duration.ago(now));\n    });\n  });\n});",
@@ -1542,7 +1680,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 81,
+    "__docId__": 90,
     "kind": "test",
     "name": "describe0",
     "testId": 0,
@@ -1558,7 +1696,7 @@
     ]
   },
   {
-    "__docId__": 82,
+    "__docId__": 91,
     "kind": "test",
     "name": "it1",
     "testId": 1,
@@ -1571,7 +1709,7 @@
     "lineNumber": 12
   },
   {
-    "__docId__": 83,
+    "__docId__": 92,
     "kind": "test",
     "name": "it2",
     "testId": 2,
@@ -1587,7 +1725,7 @@
     ]
   },
   {
-    "__docId__": 84,
+    "__docId__": 93,
     "kind": "test",
     "name": "it3",
     "testId": 3,
@@ -1603,7 +1741,7 @@
     ]
   },
   {
-    "__docId__": 85,
+    "__docId__": 94,
     "kind": "test",
     "name": "it4",
     "testId": 4,
@@ -1619,7 +1757,7 @@
     ]
   },
   {
-    "__docId__": 86,
+    "__docId__": 95,
     "kind": "test",
     "name": "it5",
     "testId": 5,
@@ -1635,7 +1773,7 @@
     ]
   },
   {
-    "__docId__": 87,
+    "__docId__": 96,
     "kind": "test",
     "name": "it6",
     "testId": 6,
@@ -1651,7 +1789,7 @@
     ]
   },
   {
-    "__docId__": 88,
+    "__docId__": 97,
     "kind": "test",
     "name": "it7",
     "testId": 7,
@@ -1667,7 +1805,7 @@
     ]
   },
   {
-    "__docId__": 89,
+    "__docId__": 98,
     "kind": "test",
     "name": "it8",
     "testId": 8,
@@ -1683,7 +1821,7 @@
     ]
   },
   {
-    "__docId__": 90,
+    "__docId__": 99,
     "kind": "test",
     "name": "it9",
     "testId": 9,
@@ -1699,7 +1837,7 @@
     ]
   },
   {
-    "__docId__": 91,
+    "__docId__": 100,
     "kind": "test",
     "name": "it10",
     "testId": 10,
@@ -1715,7 +1853,7 @@
     ]
   },
   {
-    "__docId__": 92,
+    "__docId__": 101,
     "kind": "test",
     "name": "describe11",
     "testId": 11,
@@ -1728,7 +1866,7 @@
     "lineNumber": 75
   },
   {
-    "__docId__": 93,
+    "__docId__": 102,
     "kind": "test",
     "name": "it12",
     "testId": 12,
@@ -1744,7 +1882,7 @@
     ]
   },
   {
-    "__docId__": 94,
+    "__docId__": 103,
     "kind": "test",
     "name": "it13",
     "testId": 13,
@@ -1760,7 +1898,7 @@
     ]
   },
   {
-    "__docId__": 95,
+    "__docId__": 104,
     "kind": "test",
     "name": "it14",
     "testId": 14,
@@ -1776,7 +1914,7 @@
     ]
   },
   {
-    "__docId__": 96,
+    "__docId__": 105,
     "kind": "test",
     "name": "it15",
     "testId": 15,
@@ -1792,10 +1930,10 @@
     ]
   },
   {
-    "__docId__": 97,
+    "__docId__": 106,
     "kind": "testFile",
     "name": "__tests__/NumericMixin.test.js",
-    "content": "NumericMixin = require('../NumericMixin');\n\nNumericMixin.extend(Number.prototype);\nconst Duration = require('../Duration');\n\n/** @test {NumberMixin} */\ndescribe('NumberMixin', () => {\n\n  it('Returns a duration of seconds', () => {\n    expect((1).seconds).toEqual(new Duration(1));\n    expect((1).second).toEqual((1).seconds);\n  });\n  \n  it('Returns a duration of minutes', () => {\n    expect((1).minutes).toEqual(new Duration(60));\n    expect((1).minute).toEqual((1).minutes);\n  });\n  \n  it('Returns a duration of hours', () => {\n    expect((1).hours).toEqual(new Duration(60 * 60));\n    expect((1).hour).toEqual((1).hours);\n  });\n\n  it('Returns a duration of days', () => {\n    expect((1).days).toEqual(new Duration(60 * 60 * 24));\n    expect((1).day).toEqual((1).days);\n  });\n\n  it('Returns a duration of weeks', () => {\n    expect((1).weeks).toEqual(new Duration(60 * 60 * 24 * 7));\n    expect((1).week).toEqual((1).weeks);\n  });\n  \n  it('Returns a duration of months', () => {\n    expect((1).months).toEqual(new Duration(60 * 60 * 24 * 365 / 12));\n    expect((1).month).toEqual((1).months);\n  });\n\n  it('Returns a duration of years', () => {\n    expect((1).years).toEqual(new Duration(60 * 60 * 24 * 365));\n    expect((1).year).toEqual((1).years);\n  });\n});",
+    "content": "NumericMixin = require('../mixins/numeric/NumericDurations');\n\nNumericMixin.extend(Number.prototype);\nconst Duration = require('../Duration');\n\n/** @test {NumberMixin} */\ndescribe('NumberMixin', () => {\n\n  it('Returns a duration of seconds', () => {\n    expect((1).seconds).toEqual(new Duration(1));\n    expect((1).second).toEqual((1).seconds);\n  });\n  \n  it('Returns a duration of minutes', () => {\n    expect((1).minutes).toEqual(new Duration(60));\n    expect((1).minute).toEqual((1).minutes);\n  });\n  \n  it('Returns a duration of hours', () => {\n    expect((1).hours).toEqual(new Duration(60 * 60));\n    expect((1).hour).toEqual((1).hours);\n  });\n\n  it('Returns a duration of days', () => {\n    expect((1).days).toEqual(new Duration(60 * 60 * 24));\n    expect((1).day).toEqual((1).days);\n  });\n\n  it('Returns a duration of weeks', () => {\n    expect((1).weeks).toEqual(new Duration(60 * 60 * 24 * 7));\n    expect((1).week).toEqual((1).weeks);\n  });\n  \n  it('Returns a duration of months', () => {\n    expect((1).months).toEqual(new Duration(60 * 60 * 24 * 365 / 12));\n    expect((1).month).toEqual((1).months);\n  });\n\n  it('Returns a duration of years', () => {\n    expect((1).years).toEqual(new Duration(60 * 60 * 24 * 365));\n    expect((1).year).toEqual((1).years);\n  });\n});",
     "static": true,
     "longname": "/Users/jbkaiser/brainspan/__tests__/NumericMixin.test.js",
     "access": null,
@@ -1803,7 +1941,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 98,
+    "__docId__": 107,
     "kind": "test",
     "name": "describe16",
     "testId": 16,
@@ -1819,7 +1957,7 @@
     ]
   },
   {
-    "__docId__": 99,
+    "__docId__": 108,
     "kind": "test",
     "name": "it17",
     "testId": 17,
@@ -1832,7 +1970,7 @@
     "lineNumber": 9
   },
   {
-    "__docId__": 100,
+    "__docId__": 109,
     "kind": "test",
     "name": "it18",
     "testId": 18,
@@ -1845,7 +1983,7 @@
     "lineNumber": 14
   },
   {
-    "__docId__": 101,
+    "__docId__": 110,
     "kind": "test",
     "name": "it19",
     "testId": 19,
@@ -1858,7 +1996,7 @@
     "lineNumber": 19
   },
   {
-    "__docId__": 102,
+    "__docId__": 111,
     "kind": "test",
     "name": "it20",
     "testId": 20,
@@ -1871,7 +2009,7 @@
     "lineNumber": 24
   },
   {
-    "__docId__": 103,
+    "__docId__": 112,
     "kind": "test",
     "name": "it21",
     "testId": 21,
@@ -1884,7 +2022,7 @@
     "lineNumber": 29
   },
   {
-    "__docId__": 104,
+    "__docId__": 113,
     "kind": "test",
     "name": "it22",
     "testId": 22,
@@ -1897,7 +2035,7 @@
     "lineNumber": 34
   },
   {
-    "__docId__": 105,
+    "__docId__": 114,
     "kind": "test",
     "name": "it23",
     "testId": 23,

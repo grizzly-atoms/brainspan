@@ -9,7 +9,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "esdoc": "./node_modules/.bin/esdoc"
   },
   "author": "Joshua Kaiser",
   "license": "ISC",

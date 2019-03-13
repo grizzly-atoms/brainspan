@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">Home | brainspan</title>
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">brainspan/mixins/numeric/index.js | brainspan</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -37,27 +37,12 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="brainspan">brainspan</h1><p>When dealing with units of measure, Brainspan does the thinking so you don&apos;t have to. Brainspan was inspired by Rails Rails Numeric and ActiveSupport::Duration.</p>
-<h2 id="example-usage">Example Usage</h2><h3 id="use-with-numeric-mixin-">Use with Numeric Mixin:</h3><pre><code><code class="source-code prettyprint">require(&apos;brainspan&apos;).enableMixins();
+<div class="content" data-ice="content"><h1 data-ice="title">brainspan/mixins/numeric/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const NumericDuration = require(&apos;./NumericDurations&apos;);
 
-(1).month.ago(); // Date representing the timestamp from a month prior to current time
-(1).month.fromNow(); // Date representing the timestamp from a month in the future
-(2).weeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc
-(8).days.after(new Date(&apos;2019-03-10&apos;)); // Date representing March 18, 2019</code>
-</code></pre><h3 id="if-you-prefer-not-to-extend-the-number-prototype-">If you prefer not to extend the Number prototype:</h3><pre><code><code class="source-code prettyprint">const { Duration } = require(&apos;brainspan&apos;);
+module.exports = { NumericDuration };
+</code></pre>
 
-const oneMonth = new Duration(Duration.SECONDS_PER_MONTH);
-oneMonth.ago(); // Date representing the timestamp from a month prior to current time
-oneMonth.fromNow(); // Date representing the timestamp from a month in the future
-
-const twoWeeks = new Duration(Duration.SECONDS_PER_WEEK * 2);
-twoWeeks.before(new Date(0)); // Date representing two weeks before the Unix Epoc
-
-const eightDays = new Duration(Duration.SECONDS_PER_DAY * 8);
-eightDays.after(new Date(&apos;2019-03-10&apos;)); // Date representing March 18, 2019</code>
-</code></pre><h2 id="links">Links</h2><h3 id="api-documentation">API Documentation</h3><p><a href="https://grizzly-atoms.github.io/brainspan/">https://grizzly-atoms.github.io/brainspan/</a></p>
-<h3 id="npm">NPM</h3><p><a href="https://www.npmjs.com/package/brainspan">https://www.npmjs.com/package/brainspan</a></p>
-</div>
 </div>
 
 <footer class="footer">
