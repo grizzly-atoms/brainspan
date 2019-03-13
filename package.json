@@ -20,7 +20,7 @@
   "scripts": {
     "test": "jest",
     "test:ci": "npm run test -- --ci --testResultsProcessor=jest-junit --coverage && codecov -C",
-    "lint": "eslint . -f ./node_modules/eslint-junit/index.js",
+    "lint:ci": "eslint . -f ./node_modules/eslint-junit/index.js",
     "esdoc": "./node_modules/.bin/esdoc"
   },
   "author": "Joshua Kaiser",

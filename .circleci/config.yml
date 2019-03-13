@@ -38,6 +38,9 @@ jobs:
       - run:
           name: Tests
           command: npm run test:ci
+      - run:
+          name: ESlint
+          command: npm run lint:ci
       - store_artifacts:
           path: coverage
           prefix: coverage
