@@ -1,0 +1,76 @@
+version: 2
+
+references:
+  workspace_root: &workspace_root ~/brainspan
+
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: *workspace_root
+
+defaults: &defaults
+  working_directory: *workspace_root
+  docker:
+    - image: circleci/node:8
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Set up .npmrc
+          command: "echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc"
+      - restore_cache:
+          key: npm-dependency-cache-{{ checksum "package.json" }}
+      - run: "npm install"
+      - save_cache:
+          key: npm-dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - .
+  test:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run:
+          name: Tests
+          command: npm run test:ci
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+  publish:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Set up .npmrc
+          command: "echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc"
+      - deploy:
+          name: NPM Publish
+          command: npm publish
+
+workflows:
+  version: 2
+  build_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: /.*/
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: /.*/
+  publish:
+    jobs:
+      - publish:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*(-\d+)?/
