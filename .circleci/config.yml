@@ -82,7 +82,7 @@ workflows:
             branches:
               only: /.*/
             tags:
-              ignore: /esdoc-.*/
+              ignore: /esdoc.*/
       - test:
           requires:
             - build
@@ -90,7 +90,7 @@ workflows:
             branches:
               only: /.*/
             tags:
-              ignore: /esdoc-.*/
+              ignore: /esdoc.*/
   publish:
     jobs:
       - publish:
