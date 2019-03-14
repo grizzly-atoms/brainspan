@@ -79,18 +79,14 @@ workflows:
     jobs:
       - build:
           filters:
-            branches:
-              only: /.*/
             tags:
-              ignore: /esdoc.*/
+              ignore: /esdoc-.*/
       - test:
           requires:
             - build
           filters:
-            branches:
-              only: /.*/
             tags:
-              ignore: /esdoc.*/
+              ignore: /esdoc-.*/
   publish:
     jobs:
       - publish:
